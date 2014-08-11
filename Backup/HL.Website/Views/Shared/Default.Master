@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head" runat="server">
+    <title></title>
+    <meta name="Powered-By" content="ndhieu8x@gmail.com" />
+    <meta name="Author" content="ndhieu8x@gmail.com" />
+    <meta name="robots" content="index, follow" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/skins/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/skins/style.css" />
+    <!--[if IE 6]>
+      <script src="/Content/js/DD_belatedPNG.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/Content/js/jquery.tools.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/skins/jqueryslidemenu.css" />
+    <!--[if lte IE 7]>
+    <style type="text/css">
+      html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+    </style>
+    <![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/js/jqueryslidemenu.js"></script>
+
+</head>
+<body>
+  <form id="hlForm" runat="server">
+    <div id="header-wrapper">
+        <div id="header">
+            <a href="/" id="logo">
+                <img src="/Content/images/logo.png" alt="" />
+            </a>
+            <div id="sub-link">
+                <span><a href="/<%= (this.Page as ViewPage).CurrentSite.Code %>/site-map.aspx">Sitemap</a></span><span>|</span> <span><a href="http://mail.tns.com.vn" target="_blank">Email</a></span>
+            </div>
+            <div class="language">
+                <img src="/Content/images/en.png" width="15" height="15" />
+                <a href="/en/default.aspx"><%if ((this.Page as ViewPage).CurrentLang.ID == 2)
+                                              { %><strong>English</strong><%}
+                                              else
+                                              { %>English<%} %></a> |
+
+                <img src="/Content/images/china.png" width="15" height="15" />
+                <a href="/cn/default.aspx"><%if ((this.Page as ViewPage).CurrentLang.ID == 3)
+                                              { %><strong>Chinese</strong><%}
+                                              else
+                                              { %>Chinese<%} %></a> |
+                
+                <img src="/Content/images/vi.png" width="15" height="15" />
+                <a href="/vn/default.aspx"><%if ((this.Page as ViewPage).CurrentLang.ID == 1)
+                                              { %><strong>Vietnamese</strong><%}
+                                              else
+                                              { %>Vietnamese<%} %></a>
+            </div>
+        </div>
+    </div>
+
+    <HL:StaticControl Code="CMenu" HLID="hlMenuTop" runat="server"/>
+
+    <div id="home-wrapper">
+        <HL:StaticControl Code="CAdv" HLID="hlBackground" runat="server"/>
+    </div>
+
+    <div id="footer-wrapper">
+        <div id="footer">
+            <div class="copyright">
+                {RS:Web_Footer}
+            </div>
+            <div class="box-search">
+               <form action="/<%= (this.Page as ViewPage).CurrentSite.Code %>/search.aspx" method="get">
+                <input id="keyword" name="keyword" onclick="this.value='';" type="text" value="{RS:Web_Search}" />
+                <input  type="submit" value="submit" style="display:none;" />
+               </form>
+            </div>
+        </div>
+    </div>
+
+  </form>
+</body>
+</html>

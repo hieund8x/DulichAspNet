@@ -1,0 +1,589 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head" runat="server">
+    <title></title>
+    <meta name="Powered-By" content="ndhieu8x@gmail.com" />
+    <meta name="Author" content="HieuND" />
+    <meta name="robots" content="index, follow" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/style/tabs.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/style/tabs1.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/style/number_slideshow.css"/>
+
+    <script type="text/javascript"src="/Content/js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Default Action
+        $(".tab_content").hide(); //Hide all content
+        $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+        $(".tab_content:first").show(); //Show first tab content
+
+        //On Click Event
+        $("ul.tabs li").click(function () {
+            $("ul.tabs li").removeClass("active"); //Remove any "active" class
+            $(this).addClass("active"); //Add "active" class to selected tab
+            $(".tab_content").hide(); //Hide all tab content
+            var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+            $(activeTab).fadeIn(); //Fade in the active content
+            return false;
+        });
+        //tabs1
+        //Default Action
+        $(".tab_content1").hide(); //Hide all content
+        $("ul.tabs1 li:first").addClass("active").show(); //Activate first tab
+        $(".tab_content1:first").show(); //Show first tab content
+
+        //On Click Event
+        $("ul.tabs1 li").click(function () {
+            $("ul.tabs1 li").removeClass("active"); //Remove any "active" class
+            $(this).addClass("active"); //Add "active" class to selected tab
+            $(".tab_content1").hide(); //Hide all tab content
+            var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+            $(activeTab).fadeIn(); //Fade in the active content
+            return false;
+        });
+        
+        
+    });
+</script>
+<script type="text/javascript" src="/Content/js/number_slideshow.js"></script>
+<script language="javascript" type="text/javascript">
+    $(function () {
+        $("#number_slideshow1").number_slideshow({
+            slideshow_autoplay: 'enable',//enable disable
+            slideshow_time_interval: 5000,
+            slideshow_transition_speed: 'slow',//'normal','slow','fast' or numeral
+            slideshow_window_background_color: "#CCFFCC",
+            slideshow_window_padding: '0',
+            slideshow_window_width: '1000',
+            slideshow_window_height: '317',
+            slideshow_button_current_text_color: '#fff',
+            slideshow_border_size: '0',
+            slideshow_border_color: '#006600',
+            slideshow_show_button: 'disable',//enable disable
+            slideshow_show_title: 'enable',//enable disable
+            slideshow_button_text_color: '#FFF',
+            slideshow_button_background_color: '#66CC00',
+            slideshow_button_current_background_color: '#006600',
+            slideshow_button_border_color: '#006600',
+            slideshow_loading_gif: 'loading.gif',//loading pic, you can replace it use youself gif.
+            slideshow_button_border_size: '0'
+        });
+
+    });
+</script>
+
+</head>
+<body>
+  <form id="hlForm" runat="server">
+    <div id="waraper">
+		<header>
+			<HL:StaticControl Code="CAdv" HLID="Logo" runat="server"/>
+			<HL:StaticControl Code="CMenu" HLID="MenuTop" runat="server"/>
+			<%--<div class="flag">
+				<ul>
+					<li><a href="#"><img src="/Content/style/images/vi.png" alt="" /></a></li>
+					<li><a href="#"><img src="/Content/style/images/en.png" alt="" /></a></li>
+				</ul>
+			</div>--%>
+		</header>
+
+		<HL:StaticControl Code="CTour" HLID="MainSlide" runat="server"/>
+
+		<div class="clb"></div>
+		<div class="content">
+
+			<div class="tabshome">
+				<ul class="tabs">
+			        <li><a href="#tab1"><span>Lịch khởi hành</span></a></li>
+			        <li><a href="#tab2"><span>Tour khuyến mãi</span></a></li>
+			        <li><a href="#tab3"><span>tour mới</span></a></li>
+			        <li><a href="#tab5"><span>visa - hộ chiếu</span></a></li>
+			        <li><a href="#tab6"><span>vận chuyển</span></a></li>
+			        <li><a href="#tab7"><span>đặt phòng khách sạn</span></a></li>
+
+			    </ul>
+			    <div class="tab_container">
+			        <div id="tab1" class="tab_content">
+			           <ul class="lkh">
+			           		<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+			           </ul>
+			        </div>
+			        <div id="tab2" class="tab_content">
+			            <ul class="lkh">
+			           		<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+			           </ul>
+			        </div>
+			        <div id="tab3" class="tab_content">
+			           <ul class="lkh">
+			           		<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+							<li>
+			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
+			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
+								<p>KHỞI HÀNH NGÀY 22/333</p>
+								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           		</li>
+			           </ul>
+			        </div>
+			        <div id="tab4" class="tab_content">
+			          
+			        </div>
+			        <div id="tab5" class="tab_content">
+			          
+			        </div>
+			        <div id="tab6" class="tab_content">
+			          
+			        </div>
+			        <div id="tab7" class="tab_content">
+			          
+			        </div>
+
+			    </div>
+			</div><!--tabshome-->
+
+			<div class="clb"></div>
+			<div class="left fll">
+				
+                <!-- Sidebar Left -->
+                <HL:DynamicControl Code="MainContent" runat="server" />
+                <!-- End Sidebar Left -->
+				
+				<div class="tit-l"><a href="#">Video</a></div>
+				<div class="video-l"><img src="/Content/style/images/video.jpg" alt="" /></div>
+				<ul class="nav-video">
+					<li><a href="#">Du lịch Vịnh Hạ Long</a></li>
+					<li><a href="#">Du lịch Vịnh Hạ Long</a></li>
+					<li><a href="#">Du lịch Vịnh Hạ Long</a></li>
+				</ul>
+				<div class="clb"></div>
+				<div class="tit-album"><a href="#">Album hình ảnh</a></div>
+				<ul class="nav-album">
+					<li><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
+					<li class="last"><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
+					<li><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
+					<li class="last"><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
+				</ul>
+				<div class="clb"></div>
+				
+				<div class="ads">
+					<a href="#"><img src="/Content/style/images/ads.jpg" alt="" /></a>
+				</div>
+				<div class="ads">
+					<a href="#"><img src="/Content/style/images/ads.jpg" alt="" /></a>
+				</div>
+			</div><!--left-->
+			<div class="right fll">
+				<div class="title">
+					<p><a href="#">Tour trong nước</a></p>
+					<ul>
+						<li><a href="#">Tour miền bắc</a></li>
+						<li><a href="#">Tour miền trung - tây nguyên</a></li>
+						<li><a href="#">tour miền nam</a></li>
+						<li><a href="#">tour chuyên đề</a></li>
+					</ul>
+				</div>
+				<ul class="nav-tour">
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li class="last">
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li class="last">
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+				</ul>
+				<div class="clb"></div>
+				<div class="title">
+					<p><a href="#">Tour trong nước</a></p>
+					<ul>
+						<li><a href="#">Tour miền bắc</a></li>
+						<li><a href="#">Tour miền trung - tây nguyên</a></li>
+						<li><a href="#">tour miền nam</a></li>
+						<li><a href="#">tour chuyên đề</a></li>
+					</ul>
+				</div>
+				<ul class="nav-tour">
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li class="last">
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li>
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+					<li class="last">
+						<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
+						<h3><a href="#">Hà Nội - Lào Cai</a></h3>
+						<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
+						<p>KHỞI HÀNH NGÀY 22/333</p>
+						<p>SỐ CHỖ CÒN NHẬN: 02</p>
+						<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+					</li>
+				</ul>
+				<div class="clb"></div>
+				<div class="tabs-news">
+					<ul class="tabs1">
+				        <li><a href="#tab11"><span>Kinh nghiệm du lịch</span></a></li>
+				        <li><a href="#tab21"><span>Việt nam đất mẹ</span></a></li>
+				        <li><a href="#tab31"><span>Kỳ diệu châu Á</span></a></li>
+				        <li><a href="#tab41"><span>Đông Nam - Á</span></a></li>
+				        <li><a href="#tab51"><span>Hỗ trợ theo yêu cầu</span></a></li>
+				    </ul>
+			    <div class="tab_container1">
+			        <div id="tab11" class="tab_content1">
+			            <div class="cols-l fll">
+			            	<ul class="nav-kn">
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            	</ul>
+			            </div><!--cols-l-->
+			            <div class="cols-r fll">
+			            	<ul class="nav-cols">
+			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            	</ul>
+			            </div><!--cols-r-->
+			        </div>
+			        <div id="tab21" class="tab_content1">
+			            <div class="cols-l fll">
+			            	<ul class="nav-kn">
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            	</ul>
+			            </div><!--cols-l-->
+			            <div class="cols-r fll">
+			            	<ul class="nav-cols">
+			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            	</ul>
+			            </div><!--cols-r-->
+			        </div>
+			        <div id="tab31" class="tab_content1">
+			            <div class="cols-l fll">
+			            	<ul class="nav-kn">
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            	</ul>
+			            </div><!--cols-l-->
+			            <div class="cols-r fll">
+			            	<ul class="nav-cols">
+			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            	</ul>
+			            </div><!--cols-r-->
+			        </div>
+			        <div id="tab41" class="tab_content1">
+			            <div class="cols-l fll">
+			            	<ul class="nav-kn">
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            	</ul>
+			            </div><!--cols-l-->
+			            <div class="cols-r fll">
+			            	<ul class="nav-cols">
+			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            	</ul>
+			            </div><!--cols-r-->
+			        </div>
+			        <div id="tab51" class="tab_content1"> 
+			            <div class="cols-l fll">
+			            	<ul class="nav-kn">
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            		<li>
+			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
+									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
+									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
+			            		</li>
+			            	</ul>
+			            </div><!--cols-l-->
+			            <div class="cols-r fll">
+			            	<ul class="nav-cols">
+			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
+			            	</ul>
+			            </div><!--cols-r-->
+			        </div>
+			    </div>
+				</div><!--tabs-news-->
+			</div><!--right-->
+		</div><!--content-->
+	</div><!--waraper-->
+	<div class="clb"></div>
+	<div class="foot">
+		<div class="footer">
+			<div class="info">
+				<p style="font-weight: bold">CÔNG TY TNHH ĐÀO VŨ</p>
+				<p>Add: Số 89, Tổ 50, Phường Dịch Vọng Hậu, Cầu Giấy, Hà Nội.</p>
+				<p>VPGD: Tầng 18, Toà Nhà N105, Nguyễn Phong Sắc, Cầu Giấy, Hà Nội.</p>
+				<p>Tell: 0463 282 111 - Mobile: 0936 774 998</p>
+				<p>E-mail: lienhe@daovu.vn - Website: www.daovu.vn</p>
+			</div>
+		</div><!--footer-->
+	</div><!--foot-->
+	<!-- Facebook Widget Start -->
+<script src="/Content/js/jquery.tabSlideOut.v1.3.js"></script>
+         <script>
+             jQuery(function () {
+                 jQuery('.slide-out-div').tabSlideOut({
+                     tabHandle: '.handle',                              //class of the element that will be your tab
+                     pathToTabImage: '/Content/style/images/httt.png',          //path to the image for the tab *required*
+                     imageHeight: '151px',                               //height of tab image *required*
+                     imageWidth: '34px',                               //width of tab image *required*    
+                     tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
+                     speed: 300,                                        //speed of animation
+                     action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                     topPos: '15%',                                   //position from the top
+                     fixedPosition: true,                               //options: true makes it stick(fixed position) on scroll
+                     onLoadSlideOut: true
+                 });
+             });
+         </script>
+<div class="slide-out-div">
+        <a class="handle" href="http://link-for-non-js-users"></a>
+    <ul class="sup">
+            <li>
+                <a href="ymsgr:sendim?{$item.yahoo}"><img src="/Content/style/images/yahoo.png" /></a><a href="skype:{$item.skype}?chat" title="Gọi hoặc chat bằng Skype"><img src="/Content/style/images/skype.png" /></a>
+                <p>Tư vấn 1</p>
+            </li>
+            <li>
+                <a href="ymsgr:sendim?{$item.yahoo}"><img src="/Content/style/images/yahoo.png" /></a><a href="skype:{$item.skype}?chat" title="Gọi hoặc chat bằng Skype"><img src="/Content/style/images/skype.png" /></a>
+                <p>Tư vấn 1</p>
+            </li>
+            <li>
+                <a href="ymsgr:sendim?{$item.yahoo}"><img src="/Content/style/images/yahoo.png" /></a><a href="skype:{$item.skype}?chat" title="Gọi hoặc chat bằng Skype"><img src="/Content/style/images/skype.png" /></a>
+                <p>Tư vấn 1</p>
+            </li>
+            <li>
+                <a href="ymsgr:sendim?{$item.yahoo}"><img src="/Content/style/images/yahoo.png" /></a><a href="skype:{$item.skype}?chat" title="Gọi hoặc chat bằng Skype"><img src="/Content/style/images/skype.png" /></a>
+                <p>Tư vấn 1</p>
+            </li>
+			<li>
+                <a href="ymsgr:sendim?{$item.yahoo}"><img src="/Content/style/images/yahoo.png" /></a><a href="skype:{$item.skype}?chat" title="Gọi hoặc chat bằng Skype"><img src="/Content/style/images/skype.png" /></a>
+                <p>Tư vấn 1</p>
+            </li>
+			<li>
+                <a href="ymsgr:sendim?{$item.yahoo}"><img src="/Content/style/images/yahoo.png" /></a><a href="skype:{$item.skype}?chat" title="Gọi hoặc chat bằng Skype"><img src="/Content/style/images/skype.png" /></a>
+                <p>Tư vấn 1</p>
+            </li>
+			
+ </ul>
+    </div>
+
+  </form>
+</body>
+</html>

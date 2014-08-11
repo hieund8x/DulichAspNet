@@ -1,0 +1,14 @@
+D:\Projects\Update\MVCLastUpdate\18.6.2012\demo2012.ttv.vn_fix\demo2012.ttv.vn\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.dll
+D:\Projects\Update\MVCLastUpdate\18.6.2012\demo2012.ttv.vn_fix\demo2012.ttv.vn\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.pdb
+D:\Projects\Update\MVCLastUpdate\18.6.2012\demo2012.ttv.vn_fix\demo2012.ttv.vn\HL.Lib\bin\Debug\HLv1.0.MVC.Core.dll
+D:\Projects\Update\MVCLastUpdate\18.6.2012\demo2012.ttv.vn_fix\demo2012.ttv.vn\HL.Lib\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Update\MVCLastUpdate\18.6.2012\demo2012.ttv.vn_fix\demo2012.ttv.vn\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.dll
+D:\Projects\Update\MVCLastUpdate\18.6.2012\demo2012.ttv.vn_fix\demo2012.ttv.vn\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.pdb
+E:\ASP.NET_MVC\MVC\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.dll
+E:\ASP.NET_MVC\MVC\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.pdb
+E:\ASP.NET_MVC\MVC\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.dll
+E:\ASP.NET_MVC\MVC\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.pdb
+E:\My WebSite\Dulich\MVC\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.dll
+E:\My WebSite\Dulich\MVC\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.pdb
+E:\My WebSite\Dulich\MVC\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.dll
+E:\My WebSite\Dulich\MVC\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.pdb

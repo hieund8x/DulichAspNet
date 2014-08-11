@@ -1,0 +1,50 @@
+ul.tabs1 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 30px;
+    border:2px solid #EAEAEA; width: 742px; background: url(images/bg-tit1.jpg) repeat-x;
+}
+
+ul.tabs1 li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    border-left: none;
+    margin-bottom: -1px;
+    overflow: hidden;
+    position: relative;
+
+}
+ul.tabs1 li:first-child a{
+}
+ul.tabs1 li a {
+    text-decoration: none;
+    color: #7A5E09;
+    display: block;
+    font-size: 1.3em;
+    padding: 0 20px;
+    outline: none;
+    font-family: title;
+
+}
+ul.tabs1 li a:hover, ul.tabs1 li.active a {
+ color: #3B3B3B
+}   
+html ul.tabs1 li.active, html ul.tabs1 li:hover {
+    color: #3B3B3B;
+}
+html ul.tabs1 li.active a:hover,html ul.tabs1 li a:hover {}
+.tab_container1 {
+    border-top: none;
+    clear: both;
+    float: left; 
+    width: 100%;
+    background: #fff;
+}
+.tab_content1 {
+    overflow: hidden; margin-top: 10px
+}

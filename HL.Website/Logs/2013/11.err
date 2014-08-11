@@ -1,0 +1,112 @@
+Time : 11/11/2013 11:42:12
+IP : 127.0.0.1
+URL : http://localhost:5590/Default.aspx
+Message : The control 'CAdv:hlBackground' not set Layout
+Source : HLv1.0.MVC.Core
+TargetSite : Void phamlen_13(System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at HL.Core.MVC.ViewPage.phamlen_13(Control control_0, String string_7, String string_8, String string_9, String string_10, String string_11)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 11/11/2013 11:43:01
+IP : 127.0.0.1
+URL : http://localhost:5590/Default.aspx
+Message : The control 'CAdv:hlBackground' not set Layout
+Source : HLv1.0.MVC.Core
+TargetSite : Void phamlen_13(System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at HL.Core.MVC.ViewPage.phamlen_13(Control control_0, String string_7, String string_8, String string_9, String string_10, String string_11)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 11/11/2013 11:43:03
+IP : 127.0.0.1
+URL : http://localhost:5590/favicon.ico
+Message : File does not exist.
+Source : System.Web
+TargetSite : System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)
+StackTrace :    at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 14/11/2013 04:37:13
+IP : ::1
+URL : http://localhost:5590/Default.aspx
+Message : The control 'CAdv:hlBackground' not set Layout
+Source : HLv1.0.MVC.Core
+TargetSite : Void phamlen_13(System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at HL.Core.MVC.ViewPage.phamlen_13(Control control_0, String string_7, String string_8, String string_9, String string_10, String string_11)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 14/11/2013 04:37:13
+IP : ::1
+URL : http://localhost:5590/favicon.ico
+Message : File does not exist.
+Source : System.Web
+TargetSite : System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)
+StackTrace :    at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 14/11/2013 04:37:21
+IP : ::1
+URL : http://localhost:5590/ttvportal
+Message : File does not exist.
+Source : System.Web
+TargetSite : System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)
+StackTrace :    at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 14/11/2013 04:42:22
+IP : ::1
+URL : http://localhost:5590/Default.aspx
+Message : The control 'CAdv:hlBackground' not set Layout
+Source : HLv1.0.MVC.Core
+TargetSite : Void phamlen_13(System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at HL.Core.MVC.ViewPage.phamlen_13(Control control_0, String string_7, String string_8, String string_9, String string_10, String string_11)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.phamlen_11(Control control_0)
+   at HL.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 14/11/2013 04:42:22
+IP : ::1
+URL : http://localhost:5590/favicon.ico
+Message : File does not exist.
+Source : System.Web
+TargetSite : System.IO.FileInfo GetFileInfo(System.String, System.String, System.Web.HttpResponse)
+StackTrace :    at System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   at System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   at System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+

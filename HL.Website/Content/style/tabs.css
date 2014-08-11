@@ -1,0 +1,73 @@
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 38px;
+    width: 100%;
+    background: #FFB535 url(images/a.jpg) left no-repeat;
+}
+ul.tabs li:first-child{
+    transform: skewx(0deg);
+    transition: background .2s ease, color .2s ease;
+    list-style:none;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=31);
+}
+ul.tabs li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 38px;
+    line-height: 38px;
+    border-left: none;
+    margin-bottom: -1px;
+    background: #FFB535;
+    overflow: hidden;
+    position: relative;
+    border-left: 1px solid #fff;
+    transform: skewx(45deg);
+    transition: background .2s ease, color .2s ease;
+    list-style:none;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=31);
+}
+ul.tabs li:first-child a{
+    transform: skewx(0deg);
+}
+ul.tabs li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 1.2em;
+    padding: 0 30px;
+    outline: none;
+    transform: skewx(-45deg);
+    font-family: title;
+    text-transform: uppercase;
+}
+ul.tabs li.active a{transform: skewx(-45deg);}
+ul.tabs li:hover{transform: skewx(45deg);}
+ul.tabs li a:hover {
+    background: #fff;
+    transform: skewx(0deg);
+}   
+html ul.tabs li.active, html ul.tabs li:hover {
+    background: #fff;
+    transform: skewx(45deg);
+    transition: background .2s ease, color .2s ease;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=31);
+}
+html ul.tabs li.active a:hover,html ul.tabs li a:hover {transform: skewx(-45deg);}
+.tab_container {
+    border-top: none;
+    clear: both;
+    float: left; 
+    width: 100%;
+    background: #fff;
+
+}
+.tab_content {
+    font-size: 1.2em;
+    border-bottom: 1px dashed #D9D9D9;
+    overflow: hidden;
+
+}

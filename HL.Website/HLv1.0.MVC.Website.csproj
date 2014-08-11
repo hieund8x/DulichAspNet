@@ -1,0 +1,1051 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C83D5107-B6BE-4A52-9416-056F4A0A7070}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HL.Website</RootNamespace>
+    <AssemblyName>HLv1.0.MVC.Website</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKFinder, Version=2.1.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKFinder_ImageResize.dll</HintPath>
+    </Reference>
+    <Reference Include="HLv1.0.MVC.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LIB_BIN\HLv1.0.MVC.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Copy.asmx.cs">
+      <DependentUpon>Copy.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\File.asmx.cs">
+      <DependentUpon>File.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\News.asmx.cs">
+      <DependentUpon>News.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCP\Views\ModAlbumDetail\Add.ascx" />
+    <Content Include="AdminCP\Views\ModAlbumDetail\Index.ascx" />
+    <Content Include="AdminCP\Views\ModAlbum\Add.ascx" />
+    <Content Include="AdminCP\Views\ModAlbum\Index.ascx" />
+    <Content Include="AdminCP\Views\ModImagesProduct\Add.ascx" />
+    <Content Include="AdminCP\Views\ModImagesProduct\Index.ascx" />
+    <Content Include="AdminCP\Views\ModImagesTour\Add.ascx" />
+    <Content Include="AdminCP\Views\ModImagesTour\Index.ascx" />
+    <Content Include="AdminCP\Views\ModOrder\Add.ascx" />
+    <Content Include="AdminCP\Views\ModOrder\Index.ascx" />
+    <Content Include="AdminCP\Views\ModTour\Add.ascx" />
+    <Content Include="AdminCP\Views\ModTour\Index.ascx" />
+    <Content Include="AdminCP\Views\ModVideoProduct\Add.ascx" />
+    <Content Include="AdminCP\Views\ModVideoProduct\Index.ascx" />
+    <Content Include="AdminCP\Views\ModVideo\Add.ascx" />
+    <Content Include="AdminCP\Views\ModVideo\Index.ascx" />
+    <Content Include="bin\CKFinder.dll" />
+    <Content Include="bin\CKFinder_ImageResize.dll" />
+    <Content Include="bin\HLv1.0.MVC.Core.dll" />
+    <Content Include="bin\HLv1.0.MVC.Lib.dll" />
+    <Content Include="bin\HLv1.0.MVC.Lib.pdb" />
+    <Content Include="bin\HLv1.0.MVC.Website.dll" />
+    <Content Include="bin\HLv1.0.MVC.Website.pdb" />
+    <Content Include="AdminCP\Content\add\css\cp_v1.css" />
+    <Content Include="AdminCP\Content\add\img\add-16.gif" />
+    <Content Include="AdminCP\Content\add\img\delete-16.gif" />
+    <Content Include="AdminCP\Content\add\img\down-16.gif" />
+    <Content Include="AdminCP\Content\add\img\edit_f2.png" />
+    <Content Include="AdminCP\Content\add\img\Folder.gif" />
+    <Content Include="AdminCP\Content\add\img\logo.jpg" />
+    <Content Include="AdminCP\Content\add\img\Root.gif" />
+    <Content Include="AdminCP\Content\add\img\save-16.gif" />
+    <Content Include="AdminCP\Content\add\img\search-16.gif" />
+    <Content Include="AdminCP\Content\add\img\up-16.gif" />
+    <Content Include="AdminCP\Content\add\img\xit.gif" />
+    <Content Include="AdminCP\Content\add\js\AjaxRequest.js" />
+    <Content Include="AdminCP\Content\add\js\cp_v1.js" />
+    <Content Include="AdminCP\Content\ckeditor\adapters\jquery.js" />
+    <Content Include="AdminCP\Content\ckeditor\ckeditor.js" />
+    <Content Include="AdminCP\Content\ckeditor\ckeditor_basic.js" />
+    <Content Include="AdminCP\Content\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="AdminCP\Content\ckeditor\ckeditor_source.js" />
+    <Content Include="AdminCP\Content\ckeditor\config.js" />
+    <Content Include="AdminCP\Content\ckeditor\contents.css" />
+    <Content Include="AdminCP\Content\ckeditor\images\spacer.gif" />
+    <Content Include="AdminCP\Content\ckeditor\lang\en.js" />
+    <Content Include="AdminCP\Content\ckeditor\lang\vi.js" />
+    <Content Include="AdminCP\Content\ckeditor\lang\_languages.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="AdminCP\Content\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\dialog.css" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\editor.css" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\icons.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\skin.js" />
+    <Content Include="AdminCP\Content\ckeditor\skins\kama\templates.css" />
+    <Content Include="AdminCP\Content\ckeditor\themes\default\theme.js" />
+    <Content Include="AdminCP\Content\ckfinder\ckfinder.html" />
+    <Content Include="AdminCP\Content\ckfinder\ckfinder.js" />
+    <Content Include="AdminCP\Content\ckfinder\ckfinder_v1.js" />
+    <Content Include="AdminCP\Content\ckfinder\config.ascx" />
+    <Content Include="AdminCP\Content\ckfinder\config.js" />
+    <Content Include="AdminCP\Content\ckfinder\core\connector\aspx\connector.aspx" />
+    <Content Include="AdminCP\Content\ckfinder\core\connector\aspx\lang\en.xml" />
+    <Content Include="AdminCP\Content\ckfinder\lang\en.js" />
+    <Content Include="AdminCP\Content\ckfinder\plugins\dummy\lang\en.js" />
+    <Content Include="AdminCP\Content\ckfinder\plugins\dummy\plugin.js" />
+    <Content Include="AdminCP\Content\ckfinder\plugins\flashupload\flash\Uploader.swf" />
+    <Content Include="AdminCP\Content\ckfinder\plugins\flashupload\Uploader.html" />
+    <Content Include="AdminCP\Content\ckfinder\plugins\imageresize\images\mini.gif" />
+    <Content Include="AdminCP\Content\ckfinder\plugins\imageresize\plugin.js" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\app.css" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\host.css" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\ckffolder.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\ckffolderopened.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\ckfminus.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\ckfnothumb.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\ckfplus.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons.png" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\ai.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\avi.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\bmp.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\cs.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\default.icon.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\dll.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\doc.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\docx.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\exe.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\fla.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\gif.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\jpg.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\js.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\mdb.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\mp3.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\ogg.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\pdf.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\ppt.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\pptx.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\rdp.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\swf.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\swt.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\txt.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\vsd.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\xls.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\xlsx.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\xml.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\16\zip.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\ai.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\avi.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\bmp.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\cs.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\default.icon.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\dll.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\doc.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\docx.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\exe.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\fla.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\gif.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\jpg.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\js.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\mdb.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\mp3.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\ogg.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\ogg.png" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\pdf.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\ppt.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\pptx.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\rdp.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\swf.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\swt.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\txt.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\vsd.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\xls.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\xlsx.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\xml.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\icons\32\zip.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\loaders\16x16.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\loaders\32x32.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\spacer.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\sprites.png" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\sprites_ie6.png" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\add.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\clear_basket.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\delete.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\download.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\help.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\refresh.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\settings.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\images\toolbar\view.gif" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\richcombo.css" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\skin.js" />
+    <Content Include="AdminCP\Content\ckfinder\skins\kama\uipanel.css" />
+    <Content Include="AdminCP\Content\media\system\css\calendar-jos.css" />
+    <Content Include="AdminCP\Content\media\system\css\modal.css" />
+    <Content Include="AdminCP\Content\media\system\css\system.css" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_e.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_n.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_ne.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_nw.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_s.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_se.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_sw.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\bg_w.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\closebox.gif" />
+    <Content Include="AdminCP\Content\media\system\images\modal\closebox.png" />
+    <Content Include="AdminCP\Content\media\system\images\modal\spinner.gif" />
+    <Content Include="AdminCP\Content\media\system\images\notice-alert.png" />
+    <Content Include="AdminCP\Content\media\system\images\notice-info.png" />
+    <Content Include="AdminCP\Content\media\system\images\notice-note.png" />
+    <Content Include="AdminCP\Content\media\system\images\sort_asc.png" />
+    <Content Include="AdminCP\Content\media\system\images\sort_desc.png" />
+    <Content Include="AdminCP\Content\media\system\js\calendar-setup.js" />
+    <Content Include="AdminCP\Content\media\system\js\calendar.js" />
+    <Content Include="AdminCP\Content\media\system\js\modal.js" />
+    <Content Include="AdminCP\Content\media\system\js\mootools-core.js" />
+    <Content Include="AdminCP\Content\media\system\js\mootools-more.js" />
+    <Content Include="AdminCP\Content\media\system\js\switcher.js" />
+    <Content Include="AdminCP\Content\media\system\js\validate.js" />
+    <Content Include="AdminCP\Content\templates\bluestork\css\ie7.css" />
+    <Content Include="AdminCP\Content\templates\bluestork\css\ie8.css" />
+    <Content Include="AdminCP\Content\templates\bluestork\css\rounded.css" />
+    <Content Include="AdminCP\Content\templates\bluestork\css\template.css" />
+    <Content Include="AdminCP\Content\templates\bluestork\favicon.ico" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\checked_out.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\disabled.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\downarrow.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\downarrow0.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\featured.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\filesave.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\icon-16-allow.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\icon-16-allowinactive.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\icon-16-deny.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\icon-16-denyinactive.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\icon-16-notice-note.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\publish_g.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\publish_r.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\publish_x.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\publish_y.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\tick.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\uparrow.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\admin\uparrow0.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\bg-menu.gif" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\calendar.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-article-add.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-article-edit.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-article.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-banner-categories.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-banner-client.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-banner-tracks.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-banner.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-category-add.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-category.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-checkin.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-clear.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-config.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-contacts-categories.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-contacts.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-cpanel.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-extension.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-featured.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-generic.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-groups-add.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-groups.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-help_header.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-inbox.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-info.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-language.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-levels-add.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-levels.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-links-cat.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-links.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-massmail.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-media.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-menu-add.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-menu.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-menumgr.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-module.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-new-privatemessage.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-newsfeeds-cat.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-newsfeeds.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-plugin.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-purge.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-redirect.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-search.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-section.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-stats.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-themes.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-trash.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-user-add.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-user-edit.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-user-profile.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-user.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\header\icon-48-writemess.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_arrow.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_arrow_down.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_border.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_bottom.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button1_left.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button1_next.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_blank.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_first.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_first_off.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_image.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_last.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_last_off.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_left.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_next.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_next_off.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_pagebreak.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_prev.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_prev_off.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_readmore.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_right.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_button2_right_cap.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_corner_bl.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_corner_br.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_bl_dark.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_bl_light.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_br_dark.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_br_light.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_tl_dark.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_tl_light.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_tr_dark.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_crn_tr_light.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_header_left.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_header_middle.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_header_right.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\j_login_lock.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-archive.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-article.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-back-user.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-banner-categories.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-banner-client.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-banner-tracks.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-banner.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-category.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-checkin.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-clear.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-component.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-config.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-contacts-categories.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-contacts.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-content.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-cpanel.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-default.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-featured.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-groups.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-community.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-dev.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-docs.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-forum.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-jed.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-jrd.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-security.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-shop.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-this.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help-trans.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-help.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-info.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-install.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-language.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-levels.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-links-cat.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-links.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-logout.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-maintenance.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-massmail.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-media.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-menu.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-menumgr.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-messages.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-messaging.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-module.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-new-privatemessage.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newarticle.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newcategory.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newgroup.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newlevel.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newsfeeds-cat.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newsfeeds.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-newuser.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-notdefault.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-plugin.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-purge.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-readmess.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-redirect.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-search.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-stats.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-themes.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-trash.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-user.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-viewsite.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\menu\icon-16-writemess.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\notice-alert.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\notice-info.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\notice-note.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\selector-arrow.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\system\calendar.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-apply.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-archive.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-back.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-cancel.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-checkin.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-config.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-copy.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-css.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-default.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-delete-style.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-delete.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-edit.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-error.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-export.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-forward.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-help.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-html.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-menu.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-move.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-new-style.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-new.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-preview.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-publish.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-purge.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-refresh.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-remove.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-revert.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-save-copy.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-save-new.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-save.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-send.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-trash.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-unarchive.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-unblock.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-unpublish.png" />
+    <Content Include="AdminCP\Content\templates\bluestork\images\toolbar\icon-32-upload.png" />
+    <Content Include="AdminCP\Content\templates\system\css\system.css" />
+    <Content Include="AdminCP\Views\FormText\Index.ascx" />
+    <Content Include="AdminCP\Views\ModTag\Add.ascx" />
+    <Content Include="AdminCP\Views\ModTag\Index.ascx" />
+    <Content Include="Content\jquery\Boxer-master\.gitignore" />
+    <Content Include="Content\jquery\Boxer-master\demo\index.html" />
+    <Content Include="Content\jquery\Boxer-master\Gruntfile.js" />
+    <Content Include="Content\jquery\Boxer-master\jquery.fs.boxer-icons.png" />
+    <Content Include="Content\jquery\Boxer-master\jquery.fs.boxer-loading-dark.gif" />
+    <Content Include="Content\jquery\Boxer-master\jquery.fs.boxer-loading.gif" />
+    <Content Include="Content\jquery\Boxer-master\jquery.fs.boxer.css" />
+    <Content Include="Content\jquery\Boxer-master\jquery.fs.boxer.js" />
+    <Content Include="Content\jquery\Boxer-master\jquery.fs.boxer.min.js" />
+    <Content Include="Content\jquery\Boxer-master\src\jquery.fs.boxer.css" />
+    <Content Include="Content\jquery\Boxer-master\src\jquery.fs.boxer.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\.gitattributes" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\1_b.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\1_s.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\2_b.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\2_s.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\3_b.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\3_s.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\4_b.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\4_s.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\5_b.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\5_s.jpg" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\ajax.txt" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\iframe.html" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\demo\index.html" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\lib\jquery-1.10.1.min.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\lib\jquery-1.9.0.min.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\blank.gif" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\fancybox_loading%402x.gif" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\fancybox_loading.gif" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\fancybox_overlay.png" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\fancybox_sprite%402x.png" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\fancybox_sprite.png" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\helpers\fancybox_buttons.png" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\jquery.fancybox.css" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\jquery.fancybox.js" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\source\jquery.fancybox.pack.js" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\css\prettyPhoto.css" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\css\styles.css" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic1.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic10.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic11.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic12.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic2.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic3.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic4.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic5.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic6.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic7.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic8.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\big\pic9.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\bkg-pat.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\goto.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\mglass.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p1.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p10.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p11.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p12.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p2.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p3.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p4.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p5.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p6.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p7.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p8.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\images\thumbs\p9.jpg" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\index.html" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\js\jquery.easing.js" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\js\jquery.prettyPhoto.js" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\js\jquery.quicksand.js" />
+    <Content Include="Content\jquery\jquery-photo-gallery\jquery-photo-gallery\js\script.js" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\.gitignore" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\AUTHOR.txt" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\css\responsive-tabs.css" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\css\style.css" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\demo.html" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\js\jquery-1.11.0.min.js" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\js\jquery-2.1.0.min.js" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\js\jquery.responsiveTabs.js" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\js\jquery.responsiveTabs.min.js" />
+    <Content Include="Content\jquery\Simple Tabs\estebanmunoz_thumb.gif" />
+    <Content Include="Content\jquery\Simple Tabs\index.html" />
+    <Content Include="Content\jquery\Simple Tabs\jquery.js" />
+    <Content Include="Content\jquery\Simple Tabs\mynus_thumb.gif" />
+    <Content Include="Content\jquery\Simple Tabs\simonamunteanu_thumb.gif" />
+    <Content Include="Content\jquery\Simple Tabs\sketchblog_thumb.gif" />
+    <Content Include="Content\jquery\source\css\style.css" />
+    <Content Include="Content\jquery\source\images\bg.jpg" />
+    <Content Include="Content\jquery\source\images\loader.gif" />
+    <Content Include="Content\jquery\source\images\thumbnail-1.jpg" />
+    <Content Include="Content\jquery\source\images\thumbnail-2.jpg" />
+    <Content Include="Content\jquery\source\images\thumbnail-3.jpg" />
+    <Content Include="Content\jquery\source\images\zoom.png" />
+    <Content Include="Content\jquery\source\index.html" />
+    <Content Include="Content\jquery\source\js\hover.zoom.js" />
+    <Content Include="Content\jquery\tabtour\css\webwidget_scroller_tab.css" />
+    <Content Include="Content\jquery\tabtour\demo.html" />
+    <Content Include="Content\jquery\tabtour\images\bg.gif" />
+    <Content Include="Content\jquery\tabtour\images\bottom_tag_back.gif" />
+    <Content Include="Content\jquery\tabtour\images\modAB.gif" />
+    <Content Include="Content\jquery\tabtour\images\tab.gif" />
+    <Content Include="Content\jquery\tabtour\images\tabOff_left.gif" />
+    <Content Include="Content\jquery\tabtour\images\tabOff_right.gif" />
+    <Content Include="Content\jquery\tabtour\images\tabOn_left.gif" />
+    <Content Include="Content\jquery\tabtour\images\tabOn_right.gif" />
+    <Content Include="Content\jquery\tabtour\js\jquery-1.3.2.min.js" />
+    <Content Include="Content\jquery\tabtour\js\webwidget_scroller_tab.js" />
+    <Content Include="Content\jquery\tabtour\tab\css\webwidget_tab.css" />
+    <Content Include="Content\jquery\tabtour\tab\demo.html" />
+    <Content Include="Content\jquery\tabtour\tab\images\bg.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\bottom_tag_back.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\modAB.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\tab.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\tabOff_left.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\tabOff_right.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\tabOn_left.gif" />
+    <Content Include="Content\jquery\tabtour\tab\images\tabOn_right.gif" />
+    <Content Include="Content\jquery\tabtour\tab\js\jquery-1.3.2.min.js" />
+    <Content Include="Content\jquery\tabtour\tab\js\webwidget_tab.js" />
+    <Content Include="Content\js\demo.js" />
+    <Content Include="Content\js\hover.zoom.js" />
+    <Content Include="Content\js\jquery-1.3.2.min.js" />
+    <Content Include="Content\js\jquery.fs.boxer.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.tabSlideOut.v1.3.js" />
+    <Content Include="Content\js\number_slideshow.js" />
+    <Content Include="Content\js\tcal.js" />
+    <Content Include="Content\js\webwidget_tab.js" />
+    <Content Include="Content\style\images\a.jpg" />
+    <Content Include="Content\style\images\active.jpg" />
+    <Content Include="Content\style\images\ads.jpg" />
+    <Content Include="Content\style\images\album.jpg" />
+    <Content Include="Content\style\images\b.jpg" />
+    <Content Include="Content\style\images\bg-foot.png" />
+    <Content Include="Content\style\images\bg-li.jpg" />
+    <Content Include="Content\style\images\bg-tit.jpg" />
+    <Content Include="Content\style\images\bg-tit1.jpg" />
+    <Content Include="Content\style\images\bg-top.jpg" />
+    <Content Include="Content\style\images\bg-tour.jpg" />
+    <Content Include="Content\style\images\bg.gif" />
+    <Content Include="Content\style\images\bg2.jpg" />
+    <Content Include="Content\style\images\blank.gif" />
+    <Content Include="Content\style\images\bottom_tag_back.gif" />
+    <Content Include="Content\style\images\bread.png" />
+    <Content Include="Content\style\images\bt-li.png" />
+    <Content Include="Content\style\images\cal.gif" />
+    <Content Include="Content\style\images\dat.png" />
+    <Content Include="Content\style\images\dattour.png" />
+    <Content Include="Content\style\images\details.jpg" />
+    <Content Include="Content\style\images\dt.png" />
+    <Content Include="Content\style\images\email.jpg" />
+    <Content Include="Content\style\images\en.png" />
+    <Content Include="Content\style\images\fancybox_loading%402x.gif" />
+    <Content Include="Content\style\images\fancybox_loading.gif" />
+    <Content Include="Content\style\images\fancybox_overlay.png" />
+    <Content Include="Content\style\images\fancybox_sprite%402x.png" />
+    <Content Include="Content\style\images\fancybox_sprite.png" />
+    <Content Include="Content\style\images\first.jpg" />
+    <Content Include="Content\style\images\follows.jpg" />
+    <Content Include="Content\style\images\gt.png" />
+    <Content Include="Content\style\images\hinhanh.jpg" />
+    <Content Include="Content\style\images\httt.png" />
+    <Content Include="Content\style\images\icon-alb.png" />
+    <Content Include="Content\style\images\icon-news.png" />
+    <Content Include="Content\style\images\icon-video.png" />
+    <Content Include="Content\style\images\iconother.png" />
+    <Content Include="Content\style\images\images.jpg" />
+    <Content Include="Content\style\images\imgnews.jpg" />
+    <Content Include="Content\style\images\jquery.fs.boxer-icons.png" />
+    <Content Include="Content\style\images\jquery.fs.boxer-loading-dark.gif" />
+    <Content Include="Content\style\images\jquery.fs.boxer-loading.gif" />
+    <Content Include="Content\style\images\kh.jpg" />
+    <Content Include="Content\style\images\khung.png" />
+    <Content Include="Content\style\images\kn.jpg" />
+    <Content Include="Content\style\images\last.jpg" />
+    <Content Include="Content\style\images\lich.jpg" />
+    <Content Include="Content\style\images\like.jpg" />
+    <Content Include="Content\style\images\lkh.jpg" />
+    <Content Include="Content\style\images\loader.gif" />
+    <Content Include="Content\style\images\logo.png" />
+    <Content Include="Content\style\images\map.jpg" />
+    <Content Include="Content\style\images\modAB.gif" />
+    <Content Include="Content\style\images\news.png" />
+    <Content Include="Content\style\images\next.jpg" />
+    <Content Include="Content\style\images\nhaplai.png" />
+    <Content Include="Content\style\images\no_cal.gif" />
+    <Content Include="Content\style\images\page.jpg" />
+    <Content Include="Content\style\images\prev.jpg" />
+    <Content Include="Content\style\images\print.jpg" />
+    <Content Include="Content\style\images\reset.png" />
+    <Content Include="Content\style\images\search.png" />
+    <Content Include="Content\style\images\send.png" />
+    <Content Include="Content\style\images\skype.png" />
+    <Content Include="Content\style\images\slide.jpg" />
+    <Content Include="Content\style\images\star.png" />
+    <Content Include="Content\style\images\tab.gif" />
+    <Content Include="Content\style\images\tabOff_left.gif" />
+    <Content Include="Content\style\images\tabOff_right.gif" />
+    <Content Include="Content\style\images\tabOn_left.gif" />
+    <Content Include="Content\style\images\tabOn_right.gif" />
+    <Content Include="Content\style\images\tabs-l.gif" />
+    <Content Include="Content\style\images\tabs-l.png" />
+    <Content Include="Content\style\images\tabs-r.png" />
+    <Content Include="Content\style\images\tit-news-r.png" />
+    <Content Include="Content\style\images\tit-news.png" />
+    <Content Include="Content\style\images\title.jpg" />
+    <Content Include="Content\style\images\top.jpg" />
+    <Content Include="Content\style\images\tour.jpg" />
+    <Content Include="Content\style\images\tourkhac.jpg" />
+    <Content Include="Content\style\images\vi.png" />
+    <Content Include="Content\style\images\video-hover.png" />
+    <Content Include="Content\style\images\video.jpg" />
+    <Content Include="Content\style\images\view.png" />
+    <Content Include="Content\style\images\yahoo.png" />
+    <Content Include="Content\style\images\zoom.png" />
+    <Content Include="Content\style\jquery.fs.boxer.css" />
+    <Content Include="Content\style\number_slideshow.css" />
+    <Content Include="Content\style\style.css" />
+    <Content Include="Content\style\tabs.css" />
+    <Content Include="Content\style\tabs1.css" />
+    <Content Include="Content\style\tabs2.css" />
+    <Content Include="Content\style\tcal.css" />
+    <Content Include="Content\style\webwidget_tab.css" />
+    <Content Include="CP\Views\ModImagesProduct\Add.ascx" />
+    <Content Include="CP\Views\ModImagesProduct\Index.ascx" />
+    <Content Include="CP\Views\ModImagesTour\Add.ascx" />
+    <Content Include="CP\Views\ModImagesTour\Index.ascx" />
+    <Content Include="CP\Views\ModOrder\Add.ascx" />
+    <Content Include="CP\Views\ModOrder\Index.ascx" />
+    <Content Include="CP\Views\ModTour\Add.ascx" />
+    <Content Include="CP\Views\ModTour\Index.ascx" />
+    <Content Include="CP\Views\ModVideoProduct\Add.ascx" />
+    <Content Include="CP\Views\ModVideoProduct\Index.ascx" />
+    <Content Include="Views\CAdv\Logo.ascx" />
+    <Content Include="Views\CAlbumDetail\Default.ascx" />
+    <Content Include="Views\CAlbum\Default.ascx" />
+    <Content Include="Views\CImagesProduct\Default.ascx" />
+    <Content Include="Views\CImagesTour\Default.ascx" />
+    <Content Include="Views\CMenu\Left2.ascx" />
+    <Content Include="Views\CMenu\Left.ascx" />
+    <Content Include="Views\CNews\SidebarNews.ascx" />
+    <Content Include="Views\COrder\Default.ascx" />
+    <Content Include="Views\CStatic\FaceGroup.ascx" />
+    <Content Include="Views\CTour\CarouselTour.ascx" />
+    <Content Include="Views\CTour\SidebarTour.ascx" />
+    <Content Include="Views\CTour\SlideTour.ascx" />
+    <Content Include="Views\CTour\Default.ascx" />
+    <Content Include="Views\CVideoProduct\Default.ascx" />
+    <Content Include="Views\CVideo\Default.ascx" />
+    <Content Include="Views\MAlbumDetail\Detail.ascx" />
+    <Content Include="Views\MAlbumDetail\Index.ascx" />
+    <Content Include="Views\MAlbum\Detail.ascx" />
+    <Content Include="Views\MAlbum\Index.ascx" />
+    <Content Include="Views\MContent\MangLuoi.ascx" />
+    <Content Include="Views\MImagesProduct\Detail.ascx" />
+    <Content Include="Views\MImagesProduct\Index.ascx" />
+    <Content Include="Views\MImagesTour\Detail.ascx" />
+    <Content Include="Views\MImagesTour\Index.ascx" />
+    <Content Include="Views\MOrder\Detail.ascx" />
+    <Content Include="Views\MOrder\Index.ascx" />
+    <Content Include="Views\MSiteMap\Index.ascx" />
+    <Content Include="Views\MSearch\Index.ascx" />
+    <Content Include="Views\CText\Default.ascx" />
+    <Content Include="Views\HttpError\404.html" />
+    <Content Include="AdminCP\Views\Shared\MenuTop.ascx" />
+    <Content Include="AdminCP\Default.aspx" />
+    <Content Include="AdminCP\Design\EditModule.ascx" />
+    <Content Include="AdminCP\Design\EditControl.ascx" />
+    <Content Include="AdminCP\Design\EditControlBegin.ascx" />
+    <Content Include="AdminCP\Design\EditControlEnd.ascx" />
+    <Content Include="AdminCP\Design\EditPage.aspx" />
+    <Content Include="AdminCP\Design\EditTemplate.aspx" />
+    <Content Include="AdminCP\Tools\SQLTools.aspx" />
+    <Content Include="AdminCP\Tools\UnLoad.aspx" />
+    <Content Include="AdminCP\Views\AccessDenied\Index.ascx" />
+    <Content Include="AdminCP\Views\FormNews\Index.ascx" />
+    <Content Include="AdminCP\Views\ModFile\Index.ascx" />
+    <Content Include="AdminCP\Views\ModFeedback\Add.ascx" />
+    <Content Include="AdminCP\Views\ModFeedback\Index.ascx" />
+    <Content Include="AdminCP\Views\ModAdv\Add.ascx" />
+    <Content Include="AdminCP\Views\ModAdv\Index.ascx" />
+    <Content Include="AdminCP\Views\ModNews\Add.ascx" />
+    <Content Include="AdminCP\Views\ModNews\Index.ascx" />
+    <Content Include="AdminCP\Views\SysModule\Add.ascx" />
+    <Content Include="AdminCP\Views\SysModule\Index.ascx" />
+    <Content Include="AdminCP\Views\SysResource\Import.ascx" />
+    <Content Include="AdminCP\Views\SysSite\Add.ascx" />
+    <Content Include="AdminCP\Views\SysSite\Index.ascx" />
+    <Content Include="AdminCP\Views\SysTemplate\Add.ascx" />
+    <Content Include="AdminCP\Views\SysTemplate\Index.ascx" />
+    <Content Include="AdminCP\Views\SysPage\Add.ascx" />
+    <Content Include="AdminCP\Views\SysPage\Index.ascx" />
+    <Content Include="AdminCP\Views\SysUserLog\Index.ascx" />
+    <Content Include="AdminCP\Views\SysResource\Add.ascx" />
+    <Content Include="AdminCP\Views\SysResource\Index.ascx" />
+    <Content Include="AdminCP\Views\SysUser\Add.ascx" />
+    <Content Include="AdminCP\Views\SysUser\Index.ascx" />
+    <Content Include="AdminCP\Views\SysRole\Add.ascx" />
+    <Content Include="AdminCP\Views\SysRole\Index.ascx" />
+    <Content Include="AdminCP\Views\SysMenu\Add.ascx" />
+    <Content Include="AdminCP\Views\SysMenu\Index.ascx" />
+    <Content Include="AdminCP\Views\UserChangeInfo\Index.ascx" />
+    <Content Include="AdminCP\Views\UserChangePass\Index.ascx" />
+    <Content Include="AdminCP\Views\Login\Index.ascx" />
+    <Content Include="AdminCP\Views\Home\Index.ascx" />
+    <Content Include="Tools\Copy.asmx" />
+    <Content Include="Tools\File.asmx" />
+    <Content Include="Tools\News.asmx" />
+    <Content Include="Views\CAdv\Left.ascx" />
+    <Content Include="Views\CAdv\Home.ascx" />
+    <Content Include="Views\CAdv\Default.ascx" />
+    <Content Include="Views\CAdv\Background.ascx" />
+    <Content Include="Views\CMenu\Top.ascx" />
+    <Content Include="Views\CStatic\ThoiTiet.ascx" />
+    <Content Include="Views\HttpError\500.html" />
+    <Content Include="Views\MFeedback\Index.ascx" />
+    <Content Include="Views\MContent\Index.ascx" />
+    <Content Include="Views\CStatic\Support.ascx" />
+    <Content Include="Views\CNews\Home.ascx" />
+    <Content Include="Views\CNews\Right.ascx" />
+    <Content Include="Views\MNews\Detail.ascx" />
+    <Content Include="Views\MNews\Index.ascx" />
+    <Content Include="Views\MTag\Detail.ascx" />
+    <Content Include="Views\MTour\Detail.ascx" />
+    <Content Include="Views\MTour\Index.ascx" />
+    <Content Include="Views\MVideoProduct\Detail.ascx" />
+    <Content Include="Views\MVideoProduct\Index.ascx" />
+    <Content Include="Views\MVideo\Detail.ascx" />
+    <Content Include="Views\MVideo\Index.ascx" />
+    <Content Include="Views\Shared\Default.Master" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="AdminCP\Views\Shared\Form.Master" />
+    <Content Include="License.lic" />
+    <Content Include="Views\Design\Default.Master" />
+    <Content Include="Views\Lang\en-US.ini" />
+    <Content Include="Views\Lang\vi-VN.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HL.Lib\HLv1.0.MVC.Lib.csproj">
+      <Project>{C2ED2502-B00D-4CA4-B7F1-D31C1BD33FD4}</Project>
+      <Name>HLv1.0.MVC.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCP\Views\Shared\Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminCP\Views\Shared\Login.Master" />
+    <Content Include="AdminCP\Views\Lang\en-US.ini" />
+    <Content Include="AdminCP\Views\Lang\vi-VN.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\upload\files\" />
+    <Folder Include="Data\upload\flash\" />
+    <Folder Include="Data\upload\images\Adv\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\FontDep.com-UVNHongHaHep_B.TTF" />
+    <Content Include="Content\font\UTM Androgyne.ttf" />
+    <Content Include="Content\font\utm_androgyne.rar" />
+    <Content Include="Content\jquery\Boxer-master.zip" />
+    <Content Include="Content\jquery\Boxer-master\bower.json" />
+    <Content Include="Content\jquery\Boxer-master\boxer.jquery.json" />
+    <Content Include="Content\jquery\Boxer-master\package.json" />
+    <Content Include="Content\jquery\Boxer-master\README.md" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\CHANGELOG.md" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\README.md" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-18d1712\sprite.psd" />
+    <Content Include="Content\jquery\fancyapps-fancyBox-v2.1.5-0-ge2248f4.zip" />
+    <Content Include="Content\jquery\hoverimage.zip" />
+    <Content Include="Content\jquery\Responsive-Tabs-master.zip" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\bower.json" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\MIT-license" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\package.json" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\README.md" />
+    <Content Include="Content\jquery\Responsive-Tabs-master\Responsive-Tabs.jquery.json" />
+    <Content Include="Content\jquery\source\images\Thumbs.db" />
+    <Content Include="Content\jquery\tabs.zip" />
+    <Content Include="Content\jquery\tabtour.zip" />
+    <Content Include="Content\jquery\tabtour\images\Thumbs.db" />
+    <Content Include="Content\jquery\tabtour\tab\images\Thumbs.db" />
+    <Content Include="Content\jquery\zoom.zip" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5590</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
