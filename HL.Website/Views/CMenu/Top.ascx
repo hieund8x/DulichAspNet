@@ -4,21 +4,21 @@
 %>
 <menu>
 	<ul>
-		<li><a href="#">Trang chủ</a></li>
-		<li><a href="#" class="active">Kinh nghiệm du lịch</a>
-			<ul>
-	            <li><a href="#">Tin tức cửa hàng</a></li>
-	            <li><a href="#">Tin tức thời trang</a></li>
-	            <li><a href="#">Tin tức tổng hợp</a></li>
-	            <li><a href="#">Tin tức cửa hàng</a></li>
-	            <li><a href="#">Tin tức thời trang</a></li>
-	            <li><a href="#">Tin tức tổng hợp</a></li>
-	        </ul>
-		</li>
-		<li><a href="#">tour nội địa</a></li>
-		<li><a href="#">tour quốc tế</a></li>
-		<li><a href="#">tổ chức sự kiện</a></li>
-		<li><a href="#">dịch vụ</a></li>
+        <%for (int i = 0; listItem != null && i < listItem.Count; i++)
+        {
+         var listChildItem = SysPageService.Instance.GetByParent_Cache(listItem[i].ID); %>
+        <li><a <%if(ViewPage.IsPageActived(listItem[i], 0)){ %> class="active" <%} %> href="<%=ViewPage.GetPageURL(listItem[i]) %>"><%=listItem[i].Name%></a>
+            <%if (listChildItem != null && listChildItem.Count>0)
+            { %>
+                <ul>
+                    <%for (int j = 0; listChildItem != null && j < listChildItem.Count; j++)
+                    { %>
+                    <li><a href="<%=ViewPage.GetPageURL(listChildItem[j]) %>"><%=listChildItem[j].Name%></a></li>
+                    <%} %>
+	            </ul>
+            <%} %>
+        </li>
+        <%} %>
 	</ul>
 </menu>
 <div class="search">

@@ -14,9 +14,17 @@
     <link rel="stylesheet" type="text/css" href="/Content/style/style.css"/>
     <link rel="stylesheet" type="text/css" href="/Content/style/tabs.css"/>
     <link rel="stylesheet" type="text/css" href="/Content/style/tabs1.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/style/tabs2.css"/>
+    <link rel="stylesheet" type="text/css" href="/Content/style/tcal.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/style/jquery.fs.boxer.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/style/webwidget_tab.css" />
     <link rel="stylesheet" type="text/css" href="/Content/style/number_slideshow.css"/>
 
-    <script type="text/javascript"src="/Content/js/jquery.js"></script>
+    <script type="text/javascript" src="/Content/js/jquery.js"></script>
+    <script type="text/javascript" src="/Content/js/demo.js"></script> 
+    <script type="text/javascript" src="/Content/js/hover.zoom.js"></script>
+    <script type="text/javascript" src="/Content/js/tcal.js"></script> 
+    <script type="text/javascript" src="/Content/js/number_slideshow.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         //Default Action
@@ -105,11 +113,7 @@
 
 		<div class="clb"></div>
 		<div class="content">
-            
-            <!-- Hom Carousel Tour -->
-			<HL:StaticControl Code="CTour" HLID="CarouselTour" runat="server"/>
 
-			<div class="clb"></div>
 			<div class="left fll">
 				
                 <!-- Sidebar Left -->

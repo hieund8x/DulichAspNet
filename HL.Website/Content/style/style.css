@@ -13,7 +13,17 @@ body{ font-family:Arial, Helvetica, sans-serif; font-size:12px; background:url(i
 #waraper{width: 1000px; margin: 0 auto;  margin-top: 55px;}
 header{height: 87px; width: 100%; margin-bottom: 20px; position: relative; background: #23262B}
 .logo{height: 100%; width:210px; background: #FFB535; position: absolute; left: 0; top: 0; text-align: center;}
-menu{height: 40px; width: 734px; border-bottom: 3px solid #FFB535; position: absolute; right: 25px; top: 0;}
+menu{height: 40px; width: 745px; border-bottom: 3px solid #FFB535; position: absolute; right: 30px; top: 0;}
+menu.onscroll {
+    background: none repeat scroll 0 0 #000 !important;
+    border-bottom: 3px solid #ffb535 !important;
+    height: 40px !important;
+    left: 27% !important;
+    position: fixed !important;
+    right: 30px !important;
+    width: 745px !important;
+    z-index: 5555 !important;
+}
 menu ul li{float: left; display: inline; position: relative;}
 menu ul li a{line-height: 40px; text-transform: uppercase; font-family: title;  padding:10px 17px 12px 17px; color: #fff; font-size: 14px; }
 menu ul li a:hover, menu ul li a.active{background:#FFB535; color: #090601}
@@ -26,10 +36,10 @@ menu ul li ul{background:#23262B;
 menu ul li ul a:hover{
     color: #fff;
 }
-menu ul ul li{width:100%; margin-left:0 !important; text-align:left; height:40px !important; background:url(images/bg-sub.jpg) bottom repeat-x; padding-bottom:0 !important;}
+menu ul ul li{width:100%; margin-left:0 !important; text-align:left; min-height:40px !important; background:url(images/bg-sub.jpg) bottom repeat-x; padding-bottom:0 !important;}
 menu ul ul li:last-child{background:none}
-menu ul ul li a{padding-left:10px !important; margin-left:10px; line-height:40px !important; text-transform:none !important; color:#CBCBCB; font-size:12px
-font-family: title; font-weight: lighter;}
+menu ul ul li a{padding:5px !important; margin-left:5px; line-height:40px !important; text-transform:none !important; color:#CBCBCB; font-size:12px
+font-family: title; font-weight: lighter; display:block;}
 menu ul ul li a:hover{color:#fff; text-transform:none !important; background:none}
 menu ul li:hover ul{
     display: block;

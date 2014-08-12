@@ -18,7 +18,6 @@
 
                 <HL:StaticControl Code="CTour" HLID="MainSlide" runat="server"/>
 
-                <HL:StaticControl Code="CTour" HLID="CarouselTour" runat="server"/>
             </div>
              <div style="width:100%;">
                  <div style="width:40%;float:left;">

@@ -754,6 +754,11 @@
     <Content Include="Content\js\number_slideshow.js" />
     <Content Include="Content\js\tcal.js" />
     <Content Include="Content\js\webwidget_tab.js" />
+    <Content Include="Content\jwplayer\jwplayer.flash.swf" />
+    <Content Include="Content\jwplayer\jwplayer.html5.js" />
+    <Content Include="Content\jwplayer\jwplayer.js" />
+    <Content Include="Content\jwplayer\skins\five.xml" />
+    <Content Include="Content\jwplayer\skins\six.xml" />
     <Content Include="Content\style\images\a.jpg" />
     <Content Include="Content\style\images\active.jpg" />
     <Content Include="Content\style\images\ads.jpg" />
@@ -841,6 +846,7 @@
     <Content Include="Content\style\images\view.png" />
     <Content Include="Content\style\images\yahoo.png" />
     <Content Include="Content\style\images\zoom.png" />
+    <Content Include="Content\js\website.js" />
     <Content Include="Content\style\jquery.fs.boxer.css" />
     <Content Include="Content\style\number_slideshow.css" />
     <Content Include="Content\style\style.css" />
@@ -861,6 +867,7 @@
     <Content Include="CP\Views\ModVideoProduct\Index.ascx" />
     <Content Include="Views\CAdv\Logo.ascx" />
     <Content Include="Views\CAlbumDetail\Default.ascx" />
+    <Content Include="Views\CAlbum\AlbumSidebar.ascx" />
     <Content Include="Views\CAlbum\Default.ascx" />
     <Content Include="Views\CImagesProduct\Default.ascx" />
     <Content Include="Views\CImagesTour\Default.ascx" />
@@ -868,13 +875,15 @@
     <Content Include="Views\CMenu\Left.ascx" />
     <Content Include="Views\CNews\SidebarNews.ascx" />
     <Content Include="Views\COrder\Default.ascx" />
+    <Content Include="Views\CStatic\Footer.ascx" />
     <Content Include="Views\CStatic\FaceGroup.ascx" />
     <Content Include="Views\CTour\CarouselTour.ascx" />
+    <Content Include="Views\CTour\HomeBlock.ascx" />
     <Content Include="Views\CTour\SidebarTour.ascx" />
     <Content Include="Views\CTour\SlideTour.ascx" />
     <Content Include="Views\CTour\Default.ascx" />
     <Content Include="Views\CVideoProduct\Default.ascx" />
-    <Content Include="Views\CVideo\Default.ascx" />
+    <Content Include="Views\CVideo\Sidebar.ascx" />
     <Content Include="Views\MAlbumDetail\Detail.ascx" />
     <Content Include="Views\MAlbumDetail\Index.ascx" />
     <Content Include="Views\MAlbum\Detail.ascx" />
@@ -934,7 +943,7 @@
     <Content Include="Tools\Copy.asmx" />
     <Content Include="Tools\File.asmx" />
     <Content Include="Tools\News.asmx" />
-    <Content Include="Views\CAdv\Left.ascx" />
+    <Content Include="Views\CAdv\SidebarLeft.ascx" />
     <Content Include="Views\CAdv\Home.ascx" />
     <Content Include="Views\CAdv\Default.ascx" />
     <Content Include="Views\CAdv\Background.ascx" />
@@ -1014,6 +1023,12 @@
     <Content Include="Content\jquery\tabtour\images\Thumbs.db" />
     <Content Include="Content\jquery\tabtour\tab\images\Thumbs.db" />
     <Content Include="Content\jquery\zoom.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\PageContent.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\PageContent.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -19,3 +19,10 @@ E:\My WebSite\Dulich\MVC\HL.Website\bin\HLv1.0.MVC.Lib.pdb
 E:\My WebSite\Dulich\MVC\HL.Website\obj\Debug\HLv1.0.MVC.Website.csprojResolveAssemblyReference.cache
 E:\My WebSite\Dulich\MVC\HL.Website\obj\Debug\HLv1.0.MVC.Website.dll
 E:\My WebSite\Dulich\MVC\HL.Website\obj\Debug\HLv1.0.MVC.Website.pdb
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\bin\HLv1.0.MVC.Website.dll
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\bin\HLv1.0.MVC.Website.pdb
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\bin\HLv1.0.MVC.Lib.dll
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\bin\HLv1.0.MVC.Lib.pdb
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\obj\Debug\HLv1.0.MVC.Website.csprojResolveAssemblyReference.cache
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\obj\Debug\HLv1.0.MVC.Website.dll
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Website\obj\Debug\HLv1.0.MVC.Website.pdb

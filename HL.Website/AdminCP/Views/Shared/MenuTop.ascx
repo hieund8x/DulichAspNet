@@ -10,6 +10,8 @@
             <li><a class="icon-16-component" href="/{CPPath}/ModFile/Index.aspx">{RS:MenuTop_FileManagement}</a></li>
             <li><a class="icon-16-article" href="/{CPPath}/ModTour/Index.aspx">Quản lý Tours</a></li>
             <li><a class="icon-16-article" href="/{CPPath}/ModOrder/Index.aspx">Quản lý Đặt tour</a></li>
+            <li><a class="icon-16-component" href="/{CPPath}/ModVideo/Index.aspx">Quản lý Video</a></li>
+            <li><a class="icon-16-component" href="/{CPPath}/ModAlbum/Index.aspx">Quản lý Album Ảnh</a></li>
         </ul>
     </li>
     <li class="node"><a>{RS:MenuTop_Design}</a>
