@@ -4,153 +4,37 @@
     var listItem = ViewBag.Data as List<ModNewsEntity>;
 %>
 
+<% if(listItem!=null && listItem.Count>0){ %>
 <div class="tabs-news">
-					<ul class="tabs1">
-				        <li><a href="#tab11"><span>Kinh nghiệm du lịch</span></a></li>
-				        <li><a href="#tab21"><span>Việt nam đất mẹ</span></a></li>
-				        <li><a href="#tab31"><span>Kỳ diệu châu Á</span></a></li>
-				        <li><a href="#tab41"><span>Đông Nam - Á</span></a></li>
-				        <li><a href="#tab51"><span>Hỗ trợ theo yêu cầu</span></a></li>
-				    </ul>
-			    <div class="tab_container1">
-			        <div id="tab11" class="tab_content1">
-			            <div class="cols-l fll">
-			            	<ul class="nav-kn">
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            	</ul>
-			            </div><!--cols-l-->
-			            <div class="cols-r fll">
-			            	<ul class="nav-cols">
-			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            	</ul>
-			            </div><!--cols-r-->
-			        </div>
-			        <div id="tab21" class="tab_content1">
-			            <div class="cols-l fll">
-			            	<ul class="nav-kn">
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            	</ul>
-			            </div><!--cols-l-->
-			            <div class="cols-r fll">
-			            	<ul class="nav-cols">
-			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            	</ul>
-			            </div><!--cols-r-->
-			        </div>
-			        <div id="tab31" class="tab_content1">
-			            <div class="cols-l fll">
-			            	<ul class="nav-kn">
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            	</ul>
-			            </div><!--cols-l-->
-			            <div class="cols-r fll">
-			            	<ul class="nav-cols">
-			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            	</ul>
-			            </div><!--cols-r-->
-			        </div>
-			        <div id="tab41" class="tab_content1">
-			            <div class="cols-l fll">
-			            	<ul class="nav-kn">
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            	</ul>
-			            </div><!--cols-l-->
-			            <div class="cols-r fll">
-			            	<ul class="nav-cols">
-			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            	</ul>
-			            </div><!--cols-r-->
-			        </div>
-			        <div id="tab51" class="tab_content1"> 
-			            <div class="cols-l fll">
-			            	<ul class="nav-kn">
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            		<li>
-			            			<div class="img-kn fll"><a href="#"><img src="/Content/style/images/kn.jpg" alt="" /></a></div>
-									<p><a href="#">Những chương trình tour hot trong tháng 3 và tháng 4</a></p>
-									<p>Du lịch Singapore - Malaysia; Hong Kong - Thẩm Quyến - Quảng Châu; Dubai - Abu Dhabi - Sharjah, Nhật Bản hàn Quốc hay ...</p>
-			            		</li>
-			            	</ul>
-			            </div><!--cols-l-->
-			            <div class="cols-r fll">
-			            	<ul class="nav-cols">
-			            		<li><a href="#" class="active">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            		<li><a href="#">Kinh nghiệm chọn bikini khi đi biển cho phái đẹp </a><span class="date">(12/03/2014)</span></li>
-			            	</ul>
-			            </div><!--cols-r-->
-			        </div>
-			    </div>
-				</div><!--tabs-news-->
-
+	<ul class="tabs1">
+		<li><a href="#tab11"><span><%=ViewBag.Title%></span></a></li>
+	</ul>
+<div class="tab_container1">
+	<div id="tab11" class="tab_content1">
+		<div class="cols-l fll">
+			<ul class="nav-kn">
+                <%for(int i=0;listItem.Count<=2 ? i<listItem.Count : i<2;i++){ %>
+			    <li>
+			        <div class="img-kn fll"><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 125, 92)%>" alt="" /></a></div>
+					<p><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><%=listItem[i].Name %></a></p>
+					<p><%=listItem[i].Summary %></p>
+			    </li>
+                <%} %>
+			</ul>
+		</div><!--cols-l-->
+		<div class="cols-r fll">
+            <%if(listItem.Count>2){ %>
+			<ul class="nav-cols">
+                <%for(int j=2;j<listItem.Count;j++){ %>
+			    <li><a href="<%=ViewPage.GetURL(listItem[j].MenuID,listItem[j].Code) %>" class="active"><%=listItem[j].Name %></a><span class="date"> (<%=Utils.DayOfWeekVN(listItem[j].Published) %>, <%=string.Format("{0:dd-MM-yyyy}", listItem[j].Published) %>)</span></li>
+                <%} %>
+			</ul>
+            <%} %>
+		</div><!--cols-r-->
+	</div>
+</div>
+</div><!--tabs-news-->
+<%}%>
 <%--<div class="box_new_l">
     <div class="title">
         <h2><%=ViewBag.Title%></h2>

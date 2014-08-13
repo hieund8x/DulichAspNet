@@ -62,11 +62,11 @@ menu ul li:hover ul{
 .left{width: 183px; margin: 0px 20px; margin-top: 20px;}
 .tit-l{height: 30px; width: 100%; background: #23262B; text-align: center;}
 .tit-l a{line-height: 30px; font-family: title; font-size: 14px; color: #fff}
-.nav-l li{list-style: none; height: 30px; width: 100%; background: url(images/bg-li.jpg) no-repeat; border-top: 1px solid #D99D30; border-bottom: 1px solid #F8CD57}
+.nav-l li{list-style: none; min-height: 30px; width: 100%; background: url(images/bg-li.jpg) repeat; border-top: 1px solid #D99D30; border-bottom: 1px solid #F8CD57}
 .nav-l li:first-child{border-top: none;}
 .nav-l li:last-child{border-bottom: none}
 .nav-l li:hover, .nav-l li.active{background: #E5A831}
-.nav-l li a{line-height: 30px; color: #000; padding-left: 10px; padding:7px 15px}
+.nav-l li a{line-height: 30px; color: #000; padding-left: 10px; padding:7px;display:block;}
 .video-l{height: 161px; width: 100%;}
 .nav-video li{height: 30px; width: 100%; background: #23262B; list-style: none; border-bottom: 1px solid #15171A; border-top: 1px solid #32363E}
 .nav-video li:first-child{border-top: none;}
@@ -104,7 +104,7 @@ menu ul li:hover ul{
 
 .tabs-news{width: 100%; margin: 20px auto; overflow: hidden;}
 .cols-l{width: 401px;}
-.nav-kn li{width: 100%; margin: 20px auto; border-bottom: 1px dashed #CFCFCF; padding-bottom: 20px; height: 102px}
+.nav-kn li{width: 100%; margin: 20px auto; border-bottom: 1px dashed #CFCFCF; padding-bottom: 20px; min-height: 102px}
 .img-kn{height: 92px; width: 125px; background: url(images/bg-tour.jpg) repeat; padding: 4px; margin-right: 10px; border:1px solid #F6F6F6;}
 .nav-kn li p a{padding-bottom: 10px; color: #565656; font-family: title; line-height: 20px; word-spacing: 2px; font-size: 14px;}
 .nav-kn li p{color: #565656}
@@ -131,7 +131,7 @@ menu ul li:hover ul{
 .news-r{height: 36px; width: 296px; background: url(images/tit-news-r.png) no-repeat;}
 .news-ct{height: 36px; width: 396px; background: url(images/tit-news.png) repeat-x; font-family: news}
 .news-ct p{line-height: 30px; padding-left: 10px; font-size: 16px; }
-.hot-news{height: 125px; width: 95%; margin: 10px auto}
+.hot-news{min-height: 125px; width: 95%; margin: 10px auto}
 .img-hot{height: 112px; width: 167px; background: #fff; border-radius: 7px; padding: 3px; margin-right: 10px; box-shadow: 0px 3px 5px #ddd}
 .hot-news h3 a{color: #CD8200}
 .other-news{width: 95%; margin: 10px auto}
@@ -241,3 +241,7 @@ menu ul li:hover ul{
             background-repeat:no-repeat;
             background-position:center;
         }
+
+.page .disabled-pager {
+    display:none;
+}

@@ -3,14 +3,16 @@
 <%
     var listItem = ViewBag.Data as List<ModNewsEntity>;
 %>
-<div class="tit-l"><a href="#">Kinh nghiệm du lịch</a></div>
+<%if (listItem!=null && listItem.Count > 0)
+  { %>
+<div class="tit-l"><a href="javascript:void(0);"><%=ViewBag.Title%></a></div>
 <ul class="nav-l">
-	<li><a href="#">Việt nam đất mẹ</a></li>
-	<li><a href="#">Việt nam đất mẹ</a></li>
-	<li><a href="#">Việt nam đất mẹ</a></li>
+    <%for(int i=0;i<listItem.Count;i++){ %>
+	<li><a href="<%=ViewPage.GetURL(listItem[i].MenuID, listItem[i].Code) %>"><%=listItem[i].Name %></a></li>
+    <%} %>
 </ul>
 <div class="clb"></div>
-
+<%} %>
 <%--<div class="box_new_r">
     <div class="title">
         <h2><%=ViewBag.Title%></h2>

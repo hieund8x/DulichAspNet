@@ -246,13 +246,13 @@ namespace HL.Lib.Global
                 {
                     if (MaxPage > _PageMax)
                     {
-                        _HtmlPage += " <a href=\"" + sURL + "/" + 1 + "\">" + BackEndText + "</a> ";
-                        _HtmlPage += " <a href=\"" + sURL + "/" + MinPage + "\">" + BackText + "</a> ";
+                        _HtmlPage += " <li><a href=\"" + sURL + "/" + 1 + "\" class=\"first\" ></a></li> ";
+                        _HtmlPage += " <li><a href=\"" + sURL + "/" + MinPage + "\" class=\"prev\" ></a></li> ";
                     }
                     else if (DisableMode)
                     {
-                        _HtmlPage += " <a class=\"" + CssClass + " disabled\" href=\"#\">" + BackEndText + "</a> ";
-                        _HtmlPage += " <a class=\"" + CssClass + " disabled\" href=\"#\">" + BackText + "</a> ";
+                        _HtmlPage += " <li><a class=\"" + CssClass + " disabled-pager\" href=\"#\">" + BackEndText + "</a></li> ";
+                        _HtmlPage += " <li><a class=\"" + CssClass + " disabled-pager\" href=\"#\">" + BackText + "</a></li> ";
                     }
 
                     for (int i = MinPage; i < MaxPage; i++)
@@ -261,24 +261,24 @@ namespace HL.Lib.Global
                         {
                             if (i < MaxPageIndex)
                             {
-                                _HtmlPage += " <a href=\"" + sURL + "/" + (i + 1) + "\">" + (i + 1) + "</a> ";
+                                _HtmlPage += " <li><a href=\"" + sURL + "/" + (i + 1) + "\">" + (i + 1) + "</a></li> ";
                             }
                         }
                         else
                         {
-                            if (i < MaxPageIndex) _HtmlPage += " <a class=\"" + CssClass + " current\" href=\"#\">" + (i + 1) + "</a> ";
+                            if (i < MaxPageIndex) _HtmlPage += " <li><a class=\"active\" href=\"javascript:void(0)\">" + (i + 1) + "</a></li> ";
                         }
                     }
 
                     if (MaxPage < MaxPageIndex)
                     {
-                        _HtmlPage += " <a href=\"" + sURL + "/" + (MaxPage + 1) + "\">" + NextText + "</a> ";
-                        _HtmlPage += " <a href=\"" + sURL + "/" + (MaxPageIndex > (int)MaxPageIndex ? (int)MaxPageIndex + 1: MaxPageIndex) + "\">" + NextEndText + "</a> ";
+                        _HtmlPage += " <li><a href=\"" + sURL + "/" + (MaxPage + 1) + "\" class=\"next\" ></a></li> ";
+                        _HtmlPage += " <li><a href=\"" + sURL + "/" + (MaxPageIndex > (int)MaxPageIndex ? (int)MaxPageIndex + 1 : MaxPageIndex) + "\" class=\"lastpage\" ></a></li> ";
                     }
                     else if (DisableMode)
                     {
-                        _HtmlPage += " <a class=\"" + CssClass + " disabled\" href=\"#\">" + NextText + "</a> ";
-                        _HtmlPage += " <a class=\"" + CssClass + " disabled\" href=\"#\">" + NextEndText + "</a> ";
+                        _HtmlPage += " <li><a class=\"" + CssClass + " disabled-pager\" href=\"#\">" + NextText + "</a></li> ";
+                        _HtmlPage += " <li><a class=\"" + CssClass + " disabled-pager\" href=\"#\">" + NextEndText + "</a></li> ";
                     }
                 }
 

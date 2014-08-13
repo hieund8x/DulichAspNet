@@ -12,47 +12,32 @@
 	</div>
 	<div class="news-r fll"></div>
 </div><!--tit-news-->
+<%if(listItem!=null && listItem.Count>0){ %>
 <ul class="nav-news">
+    <%for(int i=0;listItem!=null && i<listItem.Count;i++){ %>
 	<li>
-		<div class="img-hot fll"><a href="#"><img src="/Content/style/images/imgnews.jpg" alt="" /></a></div>
-		<h3><a href="#">Ba tháng, gần 4,4 triệu lượt du khách đến Hà Nội</a></h3>
-		<p class="date">20/11/2012 - 42 lượt xem</p>
-		<p>Theo số liệu thống kê của Phòng Quản lý lữ hành (Sở VH,TT&DL Hà Nội), trong quý I năm nay, Thủ đô đã thu hút gần 4,4 triệu lượt khách du lịch (tăng 28% so với cùng kỳ năm 2011), trong đó khách quốc tế ước đạt gần 578 nghìn lượt (tăng 20%) và...</p>
-		<p><a href="#" class="view flr">Xem chi tiết</a></p>
+		<div class="img-hot fll"><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 167, 112)%>" alt="" /></a></div>
+		<h3><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><%=listItem[i].Name %></a></h3>
+		<p class="date"><%=Utils.DayOfWeekVN(listItem[i].Published) %>, <%=string.Format("{0:dd-MM-yyyy}", listItem[i].Published) %></p>
+		<p><%=listItem[i].Summary %></p>
+		<p><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>" class="view flr">Xem chi tiết</a></p>
 	</li>
-	<li>
-		<div class="img-hot fll"><a href="#"><img src="/Content/style/images/imgnews.jpg" alt="" /></a></div>
-		<h3><a href="#">Ba tháng, gần 4,4 triệu lượt du khách đến Hà Nội</a></h3>
-		<p class="date">20/11/2012 - 42 lượt xem</p>
-		<p>Theo số liệu thống kê của Phòng Quản lý lữ hành (Sở VH,TT&DL Hà Nội), trong quý I năm nay, Thủ đô đã thu hút gần 4,4 triệu lượt khách du lịch (tăng 28% so với cùng kỳ năm 2011), trong đó khách quốc tế ước đạt gần 578 nghìn lượt (tăng 20%) và...</p>
-		<p><a href="#" class="view flr">Xem chi tiết</a></p>
-	</li>
-	<li>
-		<div class="img-hot fll"><a href="#"><img src="/Content/style/images/imgnews.jpg" alt="" /></a></div>
-		<h3><a href="#">Ba tháng, gần 4,4 triệu lượt du khách đến Hà Nội</a></h3>
-		<p class="date">20/11/2012 - 42 lượt xem</p>
-		<p>Theo số liệu thống kê của Phòng Quản lý lữ hành (Sở VH,TT&DL Hà Nội), trong quý I năm nay, Thủ đô đã thu hút gần 4,4 triệu lượt khách du lịch (tăng 28% so với cùng kỳ năm 2011), trong đó khách quốc tế ước đạt gần 578 nghìn lượt (tăng 20%) và...</p>
-		<p><a href="#" class="view flr">Xem chi tiết</a></p>
-	</li>
-	<li>
-		<div class="img-hot fll"><a href="#"><img src="/Content/style/images/imgnews.jpg" alt="" /></a></div>
-		<h3><a href="#">Ba tháng, gần 4,4 triệu lượt du khách đến Hà Nội</a></h3>
-		<p class="date">20/11/2012 - 42 lượt xem</p>
-		<p>Theo số liệu thống kê của Phòng Quản lý lữ hành (Sở VH,TT&DL Hà Nội), trong quý I năm nay, Thủ đô đã thu hút gần 4,4 triệu lượt khách du lịch (tăng 28% so với cùng kỳ năm 2011), trong đó khách quốc tế ước đạt gần 578 nghìn lượt (tăng 20%) và...</p>
-		<p><a href="#" class="view flr">Xem chi tiết</a></p>
-	</li>
-	<li>
-		<div class="img-hot fll"><a href="#"><img src="/Content/style/images/imgnews.jpg" alt="" /></a></div>
-		<h3><a href="#">Ba tháng, gần 4,4 triệu lượt du khách đến Hà Nội</a></h3>
-		<p class="date">20/11/2012 - 42 lượt xem</p>
-		<p>Theo số liệu thống kê của Phòng Quản lý lữ hành (Sở VH,TT&DL Hà Nội), trong quý I năm nay, Thủ đô đã thu hút gần 4,4 triệu lượt khách du lịch (tăng 28% so với cùng kỳ năm 2011), trong đó khách quốc tế ước đạt gần 578 nghìn lượt (tăng 20%) và...</p>
-		<p><a href="#" class="view flr">Xem chi tiết</a></p>
-	</li>
+    <%} %>
 
 </ul>
 <div class="clb"></div>
-<div class="page"><img src="/Content/style/images/page.jpg" alt="" /></div>
-
+<div class="page">
+    <ul>
+    <%= GetPagination(model.Page, model.PageSize, model.TotalRecord)%>
+    </ul>
+</div>
+<%}else{ %>
+    <div style="margin:20px 10px;">
+        <p>
+            Xin lỗi, trang này hiện chưa có bài viết. Vui lòng bấm <a href="/">Vào đây để quay về Trang chủ.</a>
+        </p>
+    </div>
+<%} %>
 <%--<p class="link">
    <a href="/"><span>{RS:Web_HOME}</span></a><span>></span> 
    <%= Utils.GetMapPage(ViewPage.CurrentPage, "<span>></span>")%>
