@@ -125,12 +125,12 @@ menu ul li:hover ul{
 .slide-out-div{width: 150px; background: #fff; box-shadow: 0px 0px 5px #ddd}
 
 /*News*/
-.tit-news{height: 36px; width: 100%;}
+.tit-news{height: 36px; width: 105%;}
 .news-l{height: 36px; width: 54px; background: url(images/news.png) no-repeat;}
 .news-l1{height: 36px; width: 54px; background: url(images/icon-alb.png) no-repeat;}
-.news-r{height: 36px; width: 296px; background: url(images/tit-news-r.png) no-repeat;}
-.news-ct{height: 36px; width: 396px; background: url(images/tit-news.png) repeat-x; font-family: news}
-.news-ct p{line-height: 30px; padding-left: 10px; font-size: 16px; }
+.news-r{height: 36px; width: 11%; background: url(images/tit-news-r.png) no-repeat;}
+.news-ct{height: 36px; width: 80%; background: url(images/tit-news.png) repeat-x; font-family: news}
+.news-ct p{line-height: 30px; padding-left: 5px; font-size: 15px; }
 .hot-news{min-height: 125px; width: 95%; margin: 10px auto}
 .img-hot{height: 112px; width: 167px; background: #fff; border-radius: 7px; padding: 3px; margin-right: 10px; box-shadow: 0px 3px 5px #ddd}
 .hot-news h3 a{color: #CD8200}
