@@ -141,6 +141,7 @@
     <Compile Include="Global\Message.cs" />
     <Compile Include="Global\Pager.cs" />
     <Compile Include="Global\Security.cs" />
+    <Compile Include="Global\SendMail.cs" />
     <Compile Include="Global\Template.cs" />
     <Compile Include="Global\FileUpload.cs" />
     <Compile Include="Global\Utils.cs" />
