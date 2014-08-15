@@ -7,9 +7,9 @@ using HL.Lib.Global;
 
 namespace HL.Lib.CPControllers
 {
-    public class ModImagesTourController : CPController
+    public class FormImagesTourController : CPController
     {
-        public ModImagesTourController()
+        public FormImagesTourController()
         {
             //khoi tao Service
             DataService = ModImagesTourService.Instance;
@@ -23,6 +23,7 @@ namespace HL.Lib.CPControllers
 
             // tao danh sach
             var dbQuery = ModImagesTourService.Instance.CreateQuery()
+                                .Where(model.TourID > 0, o => o.TourID == model.TourID)
                                 .Take(model.PageSize)
                                 .OrderBy(orderBy)
                                 .Skip(model.PageIndex * model.PageSize);
@@ -80,6 +81,7 @@ namespace HL.Lib.CPControllers
 
             //chong hack
             entity.ID = model.RecordID;
+            entity.TourID = model.TourID;
 
             ViewBag.Data = entity;
             ViewBag.Model = model;
@@ -107,6 +109,7 @@ namespace HL.Lib.CPControllers
 
     public class ModImagesTourModel : DefaultModel
     {
+        public int TourID { get; set; }
     }
 }
 

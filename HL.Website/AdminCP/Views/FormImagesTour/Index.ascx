@@ -17,7 +17,7 @@
             <%=GetDefaultListCommand()%>
         </div>
         <div class="pagetitle icon-48-generic">
-            <h2>Images tour</h2>
+           <%-- <h2>Hình ảnh Tour</h2>--%>
         </div>
         <div class="clr"></div>
     </div>
@@ -27,7 +27,7 @@
 
 <script type="text/javascript">
 
-    var HLController = 'ModImagesTour';
+    var HLController = 'FormImagesTour';
 
     var HLArrVar = [ 
                         'limit', 'PageSize'
@@ -36,6 +36,7 @@
 
     var HLArrQT = [
                       '<%= model.PageIndex + 1 %>', 'PageIndex', 
+                      '<%= model.TourID %>', 'TourID', 
                       '<%= model.Sort %>', 'Sort'
                   ];
 
@@ -73,10 +74,10 @@
                     <th width="1%" nowrap="nowrap">
                         <%= GetSortLink("ID", "ID")%>
                     </th>
-                    <th width="1%" nowrap="nowrap">
+                    <%--<th width="1%" nowrap="nowrap">
                         <%= GetSortLink("Tour", "TourID")%>
-                    </th>
-                    <th style="width:40px" nowrap="nowrap">
+                    </th>--%>
+                    <th style="width:40%" nowrap="nowrap">
                         <%= GetSortLink("Ảnh", "File")%>
                     </th>
                     <th width="1%" nowrap="nowrap">
@@ -106,11 +107,11 @@
                     <td align="center">
                        <%= listEntity[i].ID%>
                     </td>
-                    <td align="center">
+                    <%--<td align="center">
                        <%= GetName(listEntity[i].getTour()) %>
-                    </td>
+                    </td>--%>
                     <td align="center">
-                       <%= Utils.GetMedia(listEntity[i].File, 40, 40)%>
+                       <%= Utils.GetMedia(listEntity[i].File, 150, 150)%>
                     </td>
                     <td align="center">
                        <%= GetPublish(listEntity[i].ID, listEntity[i].Activity)%>

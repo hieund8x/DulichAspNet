@@ -47,7 +47,8 @@ namespace HL.Lib.Controllers
             {
                 ViewBag.Other = ModTourService.Instance.CreateQuery()
                                         .Where(o => o.Activity == true)
-                                        .Where(o => o.Order < entity.Order)
+                                        .Where(o => o.ID != entity.ID)
+                                        .Where(o=> o.MenuID == entity.MenuID)
                                         .WhereIn(MenuID > 0, o => o.MenuID, WebMenuService.Instance.GetChildIDForWeb_Cache("Tour", MenuID, ViewPage.CurrentLang.ID))
                                         .OrderByDesc(o => o.Order)
                                         .Take(PageSize)

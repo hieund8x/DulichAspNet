@@ -4,7 +4,7 @@
     var model = ViewBag.Model as ModImagesTourModel;
     var entity = ViewBag.Data as ModImagesTourEntity;
 %>
-
+<script type="text/javascript" src="/{CPPath}/Content/ckfinder/ckfinder.js"></script>
 <form id="hlForm" name="hlForm" method="post">
 <input type="hidden" id="_hl_action" name="_hl_action" />
 
@@ -30,7 +30,7 @@
     <div class="m">
         <div class="col width-100">
           <table class="admintable">
-            <tr>
+           <%-- <tr>
                 <td class="key">
                     <label>Tour :</label>
                 </td>
@@ -43,7 +43,7 @@
                          <%} %>
                     </select>
                 </td>
-            </tr>
+            </tr>--%>
            <tr>
                 <td class="key">
                     <label>Ảnh :</label>

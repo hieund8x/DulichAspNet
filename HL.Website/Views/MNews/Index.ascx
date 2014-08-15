@@ -33,9 +33,7 @@
 </div>
 <%}else{ %>
     <div style="margin:20px 10px;">
-        <p>
-            Xin lỗi, trang này hiện chưa có bài viết. Vui lòng bấm <a href="/">Vào đây để quay về Trang chủ.</a>
-        </p>
+        {RS:Page_NoContent}
     </div>
 <%} %>
 <%--<p class="link">

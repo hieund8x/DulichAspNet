@@ -83,8 +83,8 @@
     <Content Include="AdminCP\Views\ModAlbum\Index.ascx" />
     <Content Include="AdminCP\Views\ModImagesProduct\Add.ascx" />
     <Content Include="AdminCP\Views\ModImagesProduct\Index.ascx" />
-    <Content Include="AdminCP\Views\ModImagesTour\Add.ascx" />
-    <Content Include="AdminCP\Views\ModImagesTour\Index.ascx" />
+    <Content Include="AdminCP\Views\FormImagesTour\Add.ascx" />
+    <Content Include="AdminCP\Views\FormImagesTour\Index.ascx" />
     <Content Include="AdminCP\Views\ModOrder\Add.ascx" />
     <Content Include="AdminCP\Views\ModOrder\Index.ascx" />
     <Content Include="AdminCP\Views\ModTour\Add.ascx" />

@@ -99,7 +99,7 @@
     <Compile Include="CPControllers\ModAdvController.cs" />
     <Compile Include="CPControllers\ModFileController.cs" />
     <Compile Include="CPControllers\ModImagesProductController.cs" />
-    <Compile Include="CPControllers\ModImagesTourController.cs" />
+    <Compile Include="CPControllers\FormImagesTourController.cs" />
     <Compile Include="CPControllers\ModNewsController.cs" />
     <Compile Include="CPControllers\ModOrderController.cs" />
     <Compile Include="CPControllers\ModTagController.cs" />

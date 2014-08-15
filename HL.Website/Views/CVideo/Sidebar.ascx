@@ -6,38 +6,30 @@
 <script type="text/javascript">
     function getVideoPlay(path, title) {
         jwplayer("video-sidebar").setup({
-            title: title,
+            title: "",
             file: path,
-            heght: 235,
-            width: 235
+            width: '100%',
+            aspectratio: '16:9',
         });
     }
+
 </script>
 <div class="tit-l"><a href="#">Video</a></div>
 <div id="video-sidebar" class="video-l"></div>
 <ul class="nav-video">
-	<li><a href="#">Du lịch Vịnh Hạ Long</a></li>
-	<li><a href="#">Du lịch Vịnh Hạ Long</a></li>
-	<li><a href="#">Du lịch Vịnh Hạ Long</a></li>
+    <%for (int i = 0; (listItem != null && listItem.Count > 0) && i < listItem.Count; i++)
+      { %>
+    <li><a href="javascript:getVideoPlay('<%= listItem[i].LinkVideo.StartsWith("http") ? listItem[i].LinkVideo : listItem[i].File.Replace("~/", "/")%>','<%=listItem[i].Name %>')"><%=listItem[i].Name %></a> </li>
+    <%} %>
 </ul>
 <script type='text/javascript'>
-    jwplayer('video-sidebar').setup({
-        file: 'https://www.youtube.com/watch?v=g8I-LoBIFgQ',
-        width: '100%',
-        aspectratio: '16:9',
-    });
-	</script>
-<%--<script type="text/javascript">
     <%if(listItem!=null && listItem.Count>0){ %>
-    getVideoPlay('<%= listItem[0].File.StartsWith("http") ? listItem[0].File : listItem[0].File.Replace("~/", "/")%>', '<%=listItem[0].Name %>');
+    getVideoPlay('<%= listItem[0].LinkVideo.StartsWith("http") ? listItem[0].LinkVideo : listItem[0].LinkVideo.Replace("~/", "/")%>', '<%=listItem[0].Name %>');
         <%}else{ %>
     getVideoPlay('', '');
     <%} %>
-    </script>
-    <%for (int i = 0; (listItem != null && listItem.Count > 0) && i < listItem.Count; i++)
-      { %>
-    <a href="javascript:getVideoPlay('<%= listItem[i].File.StartsWith("http") ? listItem[i].File : listItem[i].File.Replace("~/", "/")%>','<%=listItem[i].Name %>')"><%=listItem[i].Name %></a> 
-    <%} %>--%>
+	</script>
+
 <div class="clb"></div>
 
 

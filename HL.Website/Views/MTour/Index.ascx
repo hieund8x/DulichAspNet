@@ -3,19 +3,25 @@
 <%
     var listItem = ViewBag.Data as List<ModTourEntity>;
     var model = ViewBag.Model as MTourModel;
+    var parentPage = SysPageService.Instance.CreateQuery()
+                    .Where(o=> o.Activity==true)
+                    .Where(o => o.ID == ViewPage.CurrentPage.ParentID).ToSingle_Cache();
 %>
 
 <div class="tour">
 	<ul class="tabs2">
-		<li><a href="#tab12"><span>Tour trong nước</span></a></li>
-		<li><a href="#tab22"><span>tour miền bắc</span></a></li>
-		<li><a href="#tab32"><span>tour miền trung - tây nguyên</span></a></li>
-		<li><a href="#tab52"><span>tour miền nam</span></a></li>
-		<li><a href="#tab52"><span>tour chuyên đề</span></a></li>
-
+        <%if(parentPage!=null && parentPage.ParentID>0){ %>
+            <li>
+            <a href="<%=ViewPage.GetPageURL(parentPage) %>"><span><%=parentPage.Name %></span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&gt;</a>
+            </li>
+        <%} %>
+		<li>
+            <a href="javascript:void(0)"><span><%=ViewPage.CurrentPage.Name %></span></a>
+		</li>
 	</ul>
 <div class="tab_container2">
-	<div id="tab12" class="tab_content2">
+	<div style="margin-top:15px;" id="tab12" class="tab_content2">
+        <%if(listItem!=null && listItem.Count>0){ %>
 		<table class="table" cellpadding="0" cellspacing="0">
 			<tr>
 				<th>Điểm đến</th>
@@ -23,156 +29,43 @@
 				<th>Số ngày</th>
 				<th>Ngày đi</th>
 				<th>Phương tiện</th>
-				<th>Số chỗ còn nhận</th>
+				<th></th>
 			</tr>
+            <%for (int i = 0; i < listItem.Count;i++ ){ %>
 			<tr>
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
+				<td><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><%=listItem[i].Name %></a></td>
+				<td>
+                    <%if(listItem[i].SalePrice>0){ %>
+                        <span style="text-decoration:line-through;"><%= string.Format("{0:#,##0}", listItem[i].Price)%> vnđ</span><br />
+                        <b style="color:red;"><%= string.Format("{0:#,##0}", listItem[i].SalePrice)%> vnđ</b>
+                    <%}else{ %>
+                        <b style="color:red;"><%= string.Format("{0:#,##0}", listItem[i].Price)%> vnđ</b>
+                    <%} %>
+
+				</td>
+				<td><%=listItem[i].TimeTotal %></td>
+				<td><%=listItem[i].StartDate %></td>
 				<td>Ô tô</td>
 				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
+					<a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="/Content/style/images/dat.png" alt="" /></a>
 				</td>
-			</tr>
-			<tr class="old">
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr>
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr class="old">
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr>
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr class="old">
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr>
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr class="old">
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr>
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-			<tr class="old">
-				<td>Hà Nội - Cát Bà - Vịnh Lan Hạ 
-3 ngày</td>
-				<td>2.219.000</td>
-				<td>3</td>
-				<td>Hàng ngày</td>
-				<td>Ô tô</td>
-				<td>
-					<p style="color: #f00">9</p>
-					<a href="#"><img src="/Content/style/images/dat.png" alt="" /></a>
-				</td>
-			</tr>
-							
+			</tr>	
+            <%} %>			
 		</table>
+
 		<div class="clb"></div>
 		<div class="page">
 			<ul>
-				<li><a href="#" class="first"></a></li>
-				<li><a href="#" class="prev"></a></li>
-				<li><a href="#" class="active">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#" class="next"></a></li>
-				<li><a href="#" class="lastpage"></a></li>
+				<%= GetPagination(model.Page, model.PageSize, model.TotalRecord)%>
 			</ul>
 		</div>
+        <%}else{ %>
+        <div style="margin:20px 10px;">
+            {RS:Page_NoContent}
+        </div>
+        <%} %>
 	</div>
-	<div id="tab22" class="tab_content2">
 
-	</div>
-	<div id="tab32" class="tab_content2">
-
-	</div>
-	<div id="tab42" class="tab_content2">
-			          
-	</div>
-	<div id="tab52" class="tab_content2">
-			          
-	</div>
 </div>
 </div>
 

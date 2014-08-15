@@ -30,6 +30,58 @@
 
 <%= ShowMessage()%>
 
+<script type="text/javascript">
+    window.addEvent('domready', function () { new Accordion($$('div#content-sliders-.pane-sliders > .panel > h3.pane-toggler'), $$('div#content-sliders-.pane-sliders > .panel > div.pane-slider'), { onActive: function (toggler, i) { toggler.addClass('pane-toggler-down'); toggler.removeClass('pane-toggler'); i.addClass('pane-down'); i.removeClass('pane-hide'); Cookie.write('jpanesliders_content-sliders-', $$('div#content-sliders-.pane-sliders > .panel > h3').indexOf(toggler)); }, onBackground: function (toggler, i) { toggler.addClass('pane-toggler'); toggler.removeClass('pane-toggler-down'); i.addClass('pane-hide'); i.removeClass('pane-down'); if ($$('div#content-sliders-.pane-sliders > .panel > h3').length == $$('div#content-sliders-.pane-sliders > .panel > h3.pane-toggler').length) Cookie.write('jpanesliders_content-sliders-', -1); }, duration: 300, opacity: false, alwaysHide: true }); });
+</script>
+<%if (model.RecordID > 0)
+  { %>
+<script type="text/javascript">
+    document.switcher = null;
+    window.addEvent('domready', function () {
+        toggler = document.id('submenu');
+        element = document.id('tab-document1');
+        if (element) {
+            document.switcher = new JSwitcher(toggler, element, { cookieName: "app1" });
+        }
+    });
+</script>
+<%} %>
+<div id="submenu-box">
+    <div class="t">
+        <div class="t">
+            <div class="t">
+            </div>
+        </div>
+    </div>
+    <div class="m">
+        <div class="submenu-box">
+            <div class="submenu-pad">
+                <ul id="submenu" class="configuration">
+                    <li><a id="tab2" class="active">Tour</a></li>
+                    <%if (model.RecordID > 0)
+                      { %>
+                    <li><a id="tab1">Hình ảnh Tour</a></li>
+                    <%} %>
+                </ul>
+                <div class="clr">
+                </div>
+            </div>
+        </div>
+        <div class="clr">
+        </div>
+        <div class="clr">
+        </div>
+    </div>
+    <div class="b">
+        <div class="b">
+            <div class="b">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="tab-document1" class="col width-100">
+    <div id="page-tab2" class="tab">
+
 <div id="element-box">
     <div class="t"><div class="t"><div class="t"></div></div></div>
     <div class="m">
@@ -157,7 +209,7 @@
                     <label>Ảnh Slide:</label>
                 </td>
                 <td>
-                    <%= Utils.GetMedia(entity.File, 100, 80)%> <br />
+                    <%= Utils.GetMedia(entity.Img_Slide, 200, 80)%> <br />
                     <input class="text_input" type="text" name="Img_Slide" id="Img_Slide" style="width:80%;" value="<%=entity.Img_Slide %>" maxlength="255" />
                     <input class="text_input" style="width:17%;" type="button" onclick="ShowFileForm('Img_Slide'); return false;" value="Chọn Ảnh Slide" />
                 </td>
@@ -187,5 +239,15 @@
     </div>
     <div class="b"><div class="b"><div class="b"></div></div></div>
 </div>
+
+</div>
+    <%if (model.RecordID > 0)
+      { %>
+    <div id="page-tab1" class="tab">
+        <iframe src="/AdminCP/FormImagesTour/Index.aspx/TourID/<%=model.RecordID %>"
+            style='position: static; top: 240px; left: 0px; width: 101%; height: 1100px;
+            z-index: 999; overflow: auto;' frameborder='no'></iframe>
+    </div>
+    <%} %>
 
 </form>
