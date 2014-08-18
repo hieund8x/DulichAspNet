@@ -31,6 +31,7 @@ namespace HL.Lib.Controllers
                             .ToList_Cache();
 
             ViewBag.Title = Title;
+            ViewBag.MenuID = MenuID;
         }
     }
 }

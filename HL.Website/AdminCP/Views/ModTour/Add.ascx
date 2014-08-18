@@ -111,7 +111,7 @@
                     <label>Tên Tour:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Name" id="Name" value="<%=entity.Name %>" maxlength="255" />
+                    <input class="text_input" type="text" name="Name" id="Name" value="<%=entity.Name %>" />
                 </td>
             </tr>
            <tr>
@@ -119,7 +119,7 @@
                     <label>Mã:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Code" id="Code" value="<%=entity.Code %>" maxlength="255" />
+                    <input class="text_input" type="text" name="Code" id="Code" value="<%=entity.Code %>" />
                 </td>
             </tr>
            <tr>
@@ -151,7 +151,7 @@
                     <label>Thời gian:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="TimeTotal" id="TimeTotal" value="<%=entity.TimeTotal %>" maxlength="255" />
+                    <input class="text_input" type="text" name="TimeTotal" id="TimeTotal" value="<%=entity.TimeTotal %>"/>
                 </td>
             </tr>
            <tr>
@@ -159,7 +159,7 @@
                     <label>Khởi hành:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="StartDate" id="StartDate" value="<%=entity.StartDate %>" maxlength="255" />
+                    <input class="text_input" type="text" name="StartDate" id="StartDate" value="<%=entity.StartDate %>" />
                 </td>
             </tr>
            <tr>
@@ -167,7 +167,7 @@
                     <label>Lịch trình :</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Schedule" id="Schedule" value="<%=entity.Schedule %>" maxlength="255" />
+                    <input class="text_input" type="text" name="Schedule" id="Schedule" value="<%=entity.Schedule %>" />
                 </td>
             </tr>
            <tr>
@@ -175,7 +175,7 @@
                     <label>Địa điểm tham quan:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Locations" id="Locations" value="<%=entity.Locations %>" maxlength="255" />
+                    <input class="text_input" type="text" name="Locations" id="Locations" value="<%=entity.Locations %>" />
                 </td>
             </tr>
             <tr>
@@ -192,6 +192,15 @@
                 </td>
                 <td>
                     <textarea class="ckeditor" style="width:100%;height:500px" name="ScheduleDetail" id="ScheduleDetail"><%=entity.ScheduleDetail%></textarea>
+                </td>
+            </tr
+            <tr>
+                <td class="key">
+                    <label>Phương tiện:</label>
+                </td>
+                <td>
+                    <input class="text_input" type="text" name="Vehicle" id="Vehicle" value="<%=entity.Vehicle %>"/>
+
                 </td>
             </tr>
            <tr>

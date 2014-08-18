@@ -16,3 +16,4 @@ D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.dll
 D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Lib\bin\Debug\HLv1.0.MVC.Lib.pdb
 D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.dll
 D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.pdb
+D:\Asp.Net\Dulich\MVC\DulichAspNet\HL.Lib\obj\Debug\HLv1.0.MVC.Lib.csprojResolveAssemblyReference.cache

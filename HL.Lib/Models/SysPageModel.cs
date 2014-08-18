@@ -50,6 +50,29 @@ namespace HL.Lib.Models
         public bool Root { get { return (ParentID == 0); } }
 
         public bool End { get { return Items.GetValue("End").ToBool(); } }
+
+        public string getBC()
+        {
+            string str = string.Empty;
+            var list = SysPageService.Instance.getMapPage(ID);
+
+            for (int j = list.Count - 1; list != null && j >= 0; j--)
+            {
+                //var lang = SysSiteService.Instance.CreateQuery().Where(o => o.LangID == list[j].LangID).ToSingle_Cache().Code.ToString().ToLower();
+                str += "<li><a href=\"/" + list[j].GetURL() + Global.Setting.Sys_PageExt + "\">" + list[j].Name + "</a></li>";
+                
+            }
+            return str;
+        }
+        public string GetURL()
+        {
+            var p = SysPageService.Instance.GetByID_Cache(ParentID);
+            if (p.ParentID == 0) return Code;
+            else
+            {
+                return p.GetURL() + "/" + Code;
+            }
+        }
     }
 
     public class SysPageService : ServiceBase<SysPageEntity>, IPageServiceInterface
@@ -103,6 +126,21 @@ namespace HL.Lib.Models
             if (list != null)
                 list.Sort((o1, o2) => o1.Order.CompareTo(o2.Order));
             return list;
+        }
+
+        public List<SysPageEntity> getMapPage(int currentPageID)
+        {
+            List<SysPageEntity> list = new List<SysPageEntity>();
+            getPage(ref list, currentPageID);
+            return list;
+        }
+
+        private void getPage(ref List<SysPageEntity> list, int curentPageID)
+        {
+            var page = SysPageService.Instance.CreateQuery().Where(o => o.ID == curentPageID).ToSingle();
+            if (page == null || page.Root) return;
+            list.Add(page);
+            getPage(ref list, page.ParentID);
         }
 
         public string GetMapCode_Cache(SysPageEntity page)

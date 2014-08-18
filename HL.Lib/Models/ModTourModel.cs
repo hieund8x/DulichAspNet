@@ -65,6 +65,9 @@ namespace HL.Lib.Models
         public string Map { get; set; }
 
         [DataInfo]
+        public string Vehicle { get; set; }
+
+        [DataInfo]
         public DateTime Published { get; set; }
 
         [DataInfo]

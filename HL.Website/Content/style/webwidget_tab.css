@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 .webwidget_tab{font-family:Arial, Helvetica, sans-serif;}
 .tabContainer{width:100%;overflow:hidden; height: 37px; background: #ECAC22}
@@ -32,6 +32,7 @@
 }
 .webwidget_tab .tabCot{
 overflow: hidden;
+min-height: 300px;
 }
 .webwidget_tab .tabCot h4{text-transform: uppercase;}
 .webwidget_tab .tabCot p{

@@ -7,8 +7,12 @@
 
 <div class="tit-tour">
 	<ul>
-		<li><a href="#">Tour trong nước</a></li>
-		<li><a href="#">tour miền bắc</a></li>
+		<%--<li><a href="#">Tour trong nước</a></li>
+		<li><a href="#">tour miền bắc</a></li>--%>
+        <li>
+            <a href="/">Trang chủ</a>
+		</li>
+        <%=ViewPage.CurrentPage.getBC() %>
 	</ul>
 </div>
 <!-- tit-tour -->
@@ -163,67 +167,26 @@
 	</div><!-- tabs-tour -->
 	<div class="clb"></div>
 	<div class="tour-other">
+        <%if(listOther!=null && listOther.Count>0){ %>
 		<div class="title-tour"><p>Tour du lịch khác</p></div>
 		<ul class="lq">
+            <%for(int i=0;i<listOther.Count;i++){ %>
 			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
+				<div class="img-lq"><a href="#"><img src="<%=Utils.GetResizeFile(listOther[i].File, 2, 142, 92)%>" alt="" /></a></div>
+				<p class="tit-lq"><%=listOther[i].Name %></p>
+				<p class="price">Đơn giá: 
+                    <%if (listOther[i].SalePrice > 0) { %>
+                        <b style="color:red;"><%= string.Format("{0:#,##0}", listOther[i].SalePrice)%> vnđ</b>
+                    <%}else{ %>
+                        <b style="color:red;"><%= string.Format("{0:#,##0}", listOther[i].Price)%> vnđ</b>
+                    <%} %>
+				</p>
+				<p>Thời gian: <%=listOther[i].TimeTotal %></p>
 			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-			<li>
-				<div class="img-lq"><a href="#"><img src="/Content/style/images/tourkhac.jpg" alt="" /></a></div>
-				<p class="tit-lq">Côn Đảo ngày nay - Thiên đường của biển</p>
-				<p class="price">Đơn giá:1.200.000 VNĐ</p>
-				<p>Khởi hành: Hà Nội</p>
-				<p>Thời gian: 2Đ - 3N</p>
-			</li>
-
+			<%} %>
 		</ul>
 	</div><!-- tour-other -->
+    <%} %>
 </div><!-- tour-details -->
 
 <%--<div class="title"><%= ViewPage.CurrentPage.Name %></div>

@@ -8,16 +8,17 @@
                     .Where(o => o.ID == ViewPage.CurrentPage.ParentID).ToSingle_Cache();
 %>
 
-<div class="tour">
-	<ul class="tabs2">
-        <%if(parentPage!=null && parentPage.ParentID>0){ %>
+<div class="tit-tour">
+	<ul class="">
+        <%--<%if(parentPage!=null && parentPage.ParentID>0){ %>
             <li>
             <a href="<%=ViewPage.GetPageURL(parentPage) %>"><span><%=parentPage.Name %></span>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&gt;</a>
             </li>
-        <%} %>
+        <%} %>--%>
 		<li>
-            <a href="javascript:void(0)"><span><%=ViewPage.CurrentPage.Name %></span></a>
+            <a href="/">Trang chủ</a>
 		</li>
+        <%=ViewPage.CurrentPage.getBC() %>
 	</ul>
 <div class="tab_container2">
 	<div style="margin-top:15px;" id="tab12" class="tab_content2">
@@ -45,7 +46,7 @@
 				</td>
 				<td><%=listItem[i].TimeTotal %></td>
 				<td><%=listItem[i].StartDate %></td>
-				<td>Ô tô</td>
+				<td><%=listItem[i].Vehicle %></td>
 				<td>
 					<a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="/Content/style/images/dat.png" alt="" /></a>
 				</td>

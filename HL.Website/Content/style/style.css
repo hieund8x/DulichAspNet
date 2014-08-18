@@ -169,7 +169,9 @@ menu ul li:hover ul{
 .tit-tour{height: 35px; width: 100%; background: #FFB535}
 .tit-tour ul li{float: left; display: inline;}
 .tit-tour ul li a{line-height: 35px; font-family: title; text-transform: uppercase; color: #000; padding: 0px 15px; font-size: 14px;}
-.tit-tour ul li:last-child a{background: url(images/bread.png) left no-repeat; padding-left: 15px}
+.tit-tour ul li a{background: url(images/bread.png) left no-repeat; padding-left: 15px}
+.tit-tour ul li:first-child a{background: none;}
+
 
 .tour-details{width: 100%; margin: 10px auto}
 .info-tour{width: 100%; margin: 10px auto}
