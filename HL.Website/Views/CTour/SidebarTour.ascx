@@ -4,11 +4,11 @@
     var listItem = ViewBag.Data as List<ModTourEntity>;
 %>
 
-<div class="tit-l"><a href="#">Tour trong nước</a></div>
+<div class="tit-l"><a href="#"><%=ViewBag.Title!=null ? ViewBag.Title : "" %></a></div>
 <ul class="nav-l">
-	<li><a href="#">Việt nam đất mẹ</a></li>
-	<li><a href="#">Việt nam đất mẹ</a></li>
-	<li><a href="#">Việt nam đất mẹ</a></li>
+    <%for(int i=0;listItem!=null && i<listItem.Count;i++){ %>
+	<li><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><%=listItem[i].Name %></a></li>
+    <%} %>
 </ul>
 <div class="clb"></div>
 

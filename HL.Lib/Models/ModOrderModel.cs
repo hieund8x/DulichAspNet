@@ -47,6 +47,9 @@ namespace HL.Lib.Models
         public int Children2 { get; set; }
 
         [DataInfo]
+        public decimal PriceTotal { get; set; }
+
+        [DataInfo]
         public string Comment { get; set; }
 
         [DataInfo]

@@ -5,7 +5,7 @@
     int MenuID = ViewBag.MenuID;
     var listPage = SysPageService.Instance.CreateQuery()
                                           .Where(o=>o.Activity==true)
-                                          .Where(o => o.MenuID==MenuID)
+                                          .Where(MenuID>0, o => o.MenuID == MenuID)
                                           .ToList_Cache();
 %>
 
@@ -27,54 +27,24 @@
 	
 </div>
 <ul class="nav-tour">
-	<li>
-		<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
-		<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-		<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
-		<p>KHỞI HÀNH NGÀY 22/333</p>
-		<p>SỐ CHỖ CÒN NHẬN: 02</p>
-		<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
+    <%for(int i=0;listItem.Count!=null && i<listItem.Count;i++){ %>
+	<li <%if(i!=0 && ((i+1)%3==0)){ %> class="last"<%} %> >
+		<div class="img-tour"><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 208, 153)%>" alt="" /></a></div>
+		<h3><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><%=listItem[i].Name %></a></h3>
+        <p>Giá:
+            <%if (listItem[i].SalePrice > 0)
+              { %>
+                        <span style="text-decoration:line-through;"><%= string.Format("{0:#,##0}", listItem[i].Price)%> vnđ</span>
+                        <span style="color:red;"><%= string.Format("{0:#,##0}", listItem[i].SalePrice)%> vnđ</span>
+                    <%}else{ %>
+                        <span style="color:red;"><%= string.Format("{0:#,##0}", listItem[i].Price)%> vnđ</span>
+                    <%} %>
+        </p>
+		<p><%=listItem[i].TimeTotal %> (<%=listItem[i].Vehicle %>)</p>
+		<p>KHỞI HÀNH: <%=listItem[i].StartDate %></p>
+		<p><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="/Content/style/images/dt.png" alt="" /></a></p>
 	</li>
-	<li>
-		<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
-		<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-		<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
-		<p>KHỞI HÀNH NGÀY 22/333</p>
-		<p>SỐ CHỖ CÒN NHẬN: 02</p>
-		<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
-	</li>
-	<li class="last">
-		<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
-		<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-		<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
-		<p>KHỞI HÀNH NGÀY 22/333</p>
-		<p>SỐ CHỖ CÒN NHẬN: 02</p>
-		<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
-	</li>
-	<li>
-		<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
-		<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-		<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
-		<p>KHỞI HÀNH NGÀY 22/333</p>
-		<p>SỐ CHỖ CÒN NHẬN: 02</p>
-		<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
-	</li>
-	<li>
-		<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
-		<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-		<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
-		<p>KHỞI HÀNH NGÀY 22/333</p>
-		<p>SỐ CHỖ CÒN NHẬN: 02</p>
-		<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
-	</li>
-	<li class="last">
-		<div class="img-tour"><a href="#"><img src="/Content/style/images/tour.jpg" alt="" /></a></div>
-		<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-		<p>3 NGÀY 3 ĐÊM (TÀU HỎA – Ô TÔ)</p>
-		<p>KHỞI HÀNH NGÀY 22/333</p>
-		<p>SỐ CHỖ CÒN NHẬN: 02</p>
-		<p><a href="#"><img src="/Content/style/images/dt.png" alt="" /></a></p>
-	</li>
+    <%} %>
 </ul>
 <div class="clb"></div>
 

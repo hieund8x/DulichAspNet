@@ -254,3 +254,8 @@ menu ul li:hover ul{
     font-weight: bold;
     padding: 5px 10px;
 }
+
+.news-ct ul li a {
+    font-size: 16px;
+    margin: 10px;
+}

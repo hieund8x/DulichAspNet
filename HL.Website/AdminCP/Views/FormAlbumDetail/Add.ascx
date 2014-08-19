@@ -4,7 +4,7 @@
     var model = ViewBag.Model as ModAlbumDetailModel;
     var entity = ViewBag.Data as ModAlbumDetailEntity;
 %>
-
+<script type="text/javascript" src="/{CPPath}/Content/ckfinder/ckfinder.js"></script>
 <form id="hlForm" name="hlForm" method="post">
 <input type="hidden" id="_hl_action" name="_hl_action" />
 
@@ -15,7 +15,7 @@
             <%= GetDefaultAddCommand()%>
         </div>
         <div class="pagetitle icon-48-generic">
-            <h2>Album detail : <%=  model.RecordID > 0 ? "Chỉnh sửa" : "Thêm mới"%></h2>
+            <h2>Danh sách hình ảnh : <%=  model.RecordID > 0 ? "Chỉnh sửa" : "Thêm mới"%></h2>
         </div>
         <div class="clr"></div>
     </div>
@@ -30,7 +30,7 @@
     <div class="m">
         <div class="col width-100">
           <table class="admintable">
-            <tr>
+            <%--<tr>
                 <td class="key">
                     <label>Album :</label>
                 </td>
@@ -43,7 +43,7 @@
                          <%} %>
                     </select>
                 </td>
-            </tr>
+            </tr>--%>
            <tr>
                 <td class="key">
                     <label>Ảnh :</label>

@@ -94,7 +94,7 @@
     <Compile Include="CPControllers\FormTextController.cs" />
     <Compile Include="CPControllers\FormNewsController.cs" />
     <Compile Include="CPControllers\ModAlbumController.cs" />
-    <Compile Include="CPControllers\ModAlbumDetailController.cs" />
+    <Compile Include="CPControllers\FormAlbumDetailController.cs" />
     <Compile Include="CPControllers\ModFeedbackController.cs" />
     <Compile Include="CPControllers\ModAdvController.cs" />
     <Compile Include="CPControllers\ModFileController.cs" />

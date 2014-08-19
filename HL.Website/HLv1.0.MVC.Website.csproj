@@ -77,8 +77,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminCP\Views\ModAlbumDetail\Add.ascx" />
-    <Content Include="AdminCP\Views\ModAlbumDetail\Index.ascx" />
+    <Content Include="AdminCP\Views\FormAlbumDetail\Add.ascx" />
+    <Content Include="AdminCP\Views\FormAlbumDetail\Index.ascx" />
     <Content Include="AdminCP\Views\ModAlbum\Add.ascx" />
     <Content Include="AdminCP\Views\ModAlbum\Index.ascx" />
     <Content Include="AdminCP\Views\ModImagesProduct\Add.ascx" />

@@ -15,7 +15,7 @@
             <%= GetDefaultAddCommand()%>
         </div>
         <div class="pagetitle icon-48-generic">
-            <h2>Thứ tự : <%=  model.RecordID > 0 ? "Chỉnh sửa" : "Thêm mới"%></h2>
+            <h2>Quản lý đặt Tour : <%=  model.RecordID > 0 ? "Chỉnh sửa" : "Thêm mới"%></h2>
         </div>
         <div class="clr"></div>
     </div>
@@ -89,15 +89,7 @@
                     <label>Ngày bắt đầu:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="StartDate" id="StartDate" value="<%=entity.StartDate %>" maxlength="255" />
-                </td>
-            </tr>
-           <tr>
-                <td class="key">
-                    <label>Ngày kết thúc:</label>
-                </td>
-                <td>
-                    <input class="text_input" type="text" name="EndDate" id="EndDate" value="<%=entity.EndDate %>" maxlength="255" />
+                    <input class="text_input" type="text" name="StartDate" id="StartDate" value="<%= string.Format("{0:dd-MM-yyyy}", entity.StartDate) %>" maxlength="255" />
                 </td>
             </tr>
            <tr>
@@ -113,7 +105,7 @@
                     <label>Trẻ em 5 đến 11 tuổi :</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Children1" id="Children1" value="<%=entity.Children1 %>" maxlength="255" />
+                    <input class="text_input" type="text" name="Children1" id="Children1" value="<%=entity.Children1>0 ? entity.Children1 : 0 %>" maxlength="255" />
                 </td>
             </tr>
            <tr>
@@ -121,7 +113,15 @@
                     <label>Trẻ em dưới 5 tuổi :</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Children2" id="Children2" value="<%=entity.Children2 %>" maxlength="255" />
+                    <input class="text_input" type="text" name="Children2" id="Children2" value="<%=entity.Children2>0 ? entity.Children2 : 0 %>" maxlength="255" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key">
+                    <label>Ngày đặt:</label>
+                </td>
+                <td>
+                    <input class="text_input" type="text" name="EndDate" id="EndDate" value="<%= string.Format("{0:dd-MM-yyyy}", entity.EndDate) %>" maxlength="255" />
                 </td>
             </tr>
            <tr>
@@ -129,9 +129,10 @@
                     <label>Ghi chú :</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Comment" id="Comment" value="<%=entity.Comment %>" maxlength="255" />
+                    <textarea class="text_input" type="text" name="Comment" id="Comment" ><%=entity.Comment %></textarea>
                 </td>
             </tr>
+            
               <%if(CPViewPage.UserPermissions.Approve) {%>
             <tr>
                 <td class="key">

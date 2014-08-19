@@ -14,7 +14,7 @@
 </div><!--tit-news-->
 <%if(listItem!=null && listItem.Count>0){ %>
 <ul class="nav-news">
-    <%for(int i=0;listItem!=null && i<listItem.Count;i++){ %>
+    <%for(int i=0;i<listItem.Count;i++){ %>
 	<li>
 		<div class="img-hot fll"><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 167, 112)%>" alt="" /></a></div>
 		<h3><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>"><%=listItem[i].Name %></a></h3>

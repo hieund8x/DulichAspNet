@@ -111,6 +111,7 @@ namespace HL.Lib.CPControllers
 
                  //cap nhat state
                 entity.State = GetState(model.ArrState);
+                entity.Publisher = DateTime.Now;
 
                 //save
                 ModAlbumService.Instance.Save(entity);

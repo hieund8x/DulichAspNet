@@ -17,7 +17,7 @@
             <%=GetDefaultListCommand()%>
         </div>
         <div class="pagetitle icon-48-generic">
-            <h2>Album</h2>
+            <h2>Thư viện Ảnh</h2>
         </div>
         <div class="clr"></div>
     </div>
@@ -100,14 +100,14 @@
                     <th class="title">
                         <%= GetSortLink("Tên", "Name")%>
                     </th>
-                    <th width="1%" nowrap="nowrap">
+                    <%--<th width="1%" nowrap="nowrap">
                         <%= GetSortLink("Mã", "Code")%>
-                    </th>
-                    <th style="width:40px" nowrap="nowrap">
+                    </th>--%>
+                    <th style="width:30%" nowrap="nowrap">
                         <%= GetSortLink("Ảnh", "File")%>
                     </th>
                     <th width="1%" nowrap="nowrap">
-                        <%= GetSortLink("Publisher", "Publisher")%>
+                        <%= GetSortLink("Ngày đăng", "Publisher")%>
                     </th>
                     <th width="1%" nowrap="nowrap">
                          <%= GetSortLink("Thứ tự", "Order")%>
@@ -146,11 +146,11 @@
                     <td>
                         <a href="javascript:HLRedirect('Add', <%= listEntity[i].ID %>)"><%= listEntity[i].Name%></a>
                     </td>
-                    <td align="center">
+                    <%--<td align="center">
                        <%= listEntity[i].Code%>
-                    </td>
+                    </td>--%>
                     <td align="center">
-                       <%= Utils.GetMedia(listEntity[i].File, 40, 40)%>
+                       <%= Utils.GetMedia(listEntity[i].File, 100, 80)%>
                     </td>
                     <td align="center">
                        <%= string.Format("{0:dd/MM/yyyy HH:mm}", listEntity[i].Publisher) %>

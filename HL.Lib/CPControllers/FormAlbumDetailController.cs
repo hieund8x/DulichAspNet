@@ -7,9 +7,9 @@ using HL.Lib.Global;
 
 namespace HL.Lib.CPControllers
 {
-    public class ModAlbumDetailController : CPController
+    public class FormAlbumDetailController : CPController
     {
-        public ModAlbumDetailController()
+        public FormAlbumDetailController()
         {
             //khoi tao Service
             DataService = ModAlbumDetailService.Instance;
@@ -23,6 +23,7 @@ namespace HL.Lib.CPControllers
 
             // tao danh sach
             var dbQuery = ModAlbumDetailService.Instance.CreateQuery()
+                                .Where(model.AlbumID > 0, o=>o.AlbumID == model.AlbumID)
                                 .Take(model.PageSize)
                                 .OrderBy(orderBy)
                                 .Skip(model.PageIndex * model.PageSize);
@@ -80,6 +81,7 @@ namespace HL.Lib.CPControllers
 
             //chong hack
             entity.ID = model.RecordID;
+            entity.AlbumID = model.AlbumID;
 
             ViewBag.Data = entity;
             ViewBag.Model = model;
@@ -107,6 +109,7 @@ namespace HL.Lib.CPControllers
 
     public class ModAlbumDetailModel : DefaultModel
     {
+        public int AlbumID { get; set; }
     }
 }
 

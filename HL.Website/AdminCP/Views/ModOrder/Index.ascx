@@ -17,7 +17,7 @@
             <%=GetDefaultListCommand()%>
         </div>
         <div class="pagetitle icon-48-generic">
-            <h2>Thứ tự</h2>
+            <h2>Quản lý đặt Tour</h2>
         </div>
         <div class="clr"></div>
     </div>
@@ -91,6 +91,9 @@
                     <th width="15%" nowrap="nowrap">
                         <%= GetSortLink("Tên Tour", "TourName")%>
                     </th>
+                    <th width="10%" nowrap="nowrap">
+                        <%= GetSortLink("Giá", "PriceTotal")%>
+                    </th>
                     <%--<th width="1%" nowrap="nowrap">
                         <%= GetSortLink("Start date", "StartDate")%>
                     </th>
@@ -137,7 +140,7 @@
                        <%= listEntity[i].ID%>
                     </td>
                     <td align="center">
-                       <%= listEntity[i].CustomerName%>
+                       <a href="javascript:HLRedirect('Add', <%= listEntity[i].ID %>)"><%= listEntity[i].CustomerName%></a>
                     </td>
                    <%-- <td align="center">
                        <%= listEntity[i].CustomerAddress%>
@@ -154,6 +157,9 @@
                     <td align="center">
                        <%= listEntity[i].TourName%>
                     </td>
+                    <td align="center">
+                       <%= string.Format("{0:#,##0}", listEntity[i].PriceTotal)%> vnđ
+                    </td>
                     <%--<td align="center">
                        <%= string.Format("{0:dd/MM/yyyy HH:mm}", listEntity[i].StartDate) %>
                     </td>
@@ -164,10 +170,10 @@
                        <%= string.Format("{0:#,##0}", listEntity[i].Adults)%>
                     </td>
                     <td align="center">
-                       <%= string.Format("{0:#,##0}", listEntity[i].Children1)%>
+                       <%= listEntity[i].Children1>0 ? string.Format("{0:#,##0}", listEntity[i].Children1) : "0"%>
                     </td>
                     <td align="center">
-                       <%= string.Format("{0:#,##0}", listEntity[i].Children2)%>
+                       <%= listEntity[i].Children2>0 ? string.Format("{0:#,##0}", listEntity[i].Children2) : "0"%>
                     </td>
                     <%--<td align="center">
                        <%= listEntity[i].Comment%>

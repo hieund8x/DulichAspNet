@@ -3,6 +3,7 @@
 <% 
     var item = ViewBag.Data as ModTourEntity;
     var listOther = ViewBag.Other as List<ModTourEntity>;
+    var entity = ViewBag.entity as ModOrderEntity;
 %>
 
 <div class="tit-tour">
@@ -112,7 +113,7 @@
                         %>
 				        <ul class="hinhanh">
                             <%for(int i=0;i<listImgs.Count;i++){ %>
-				            <li><a href="<%=Utils.GetResizeFile(listImgs[i].File, 2, 0, 0)%>" class="zoom boxer boxer_image" data-gallery="gallery"><img src="<%=Utils.GetResizeFile(listImgs[i].File, 2, 199, 140)%>" alt="" /></a></li>
+				            <li><a href="<%=Utils.GetResizeFile(listImgs[i].File, 2, 1280, 720)%>" class="zoom boxer boxer_image" data-gallery="gallery"><img src="<%=Utils.GetResizeFile(listImgs[i].File, 2, 199, 140)%>" alt="" /></a></li>
 				            <%} %>
 				        </ul>
                         <%} %>
@@ -133,10 +134,19 @@
 								    <p>Số điện thoại</p>
 				                </div><!-- form-l -->
 				                <div class="form-r fll">
-				                    <p><input type="text" name="HoTen" class="inpt" /></p>	
-				                    <p><input type="text" name="DiaChi" class="inpt" /></p>	
-				                    <p><input type="text" name="Email" class="inpt" /></p>	
-				                    <p><input type="text" name="Sdt" class="inpt" /></p>	
+                                    <input type="hidden" name="TourID" value="<%=item.ID %>" />
+                                    <%
+                                        decimal priceT = 0;
+                                        if (item.SalePrice > 0)
+                                            priceT = item.SalePrice;
+                                        else
+                                            priceT = item.Price;
+                                           %>
+                                    <input type="hidden" name="PriceTotal" value="<%=priceT %>" />
+				                    <p><input type="text" name="CustomerName" class="inpt" /></p>	
+				                    <p><input type="text" name="CustomerAddress" class="inpt" /></p>	
+				                    <p><input type="text" name="CustomerEmail" class="inpt" /></p>	
+				                    <p><input type="text" name="CusomerPhone" class="inpt" /></p>	
 				                </div><!-- form-r -->
 				                <div class="clb"></div>
 				                <h4>thông tin tour:</h4>
@@ -147,10 +157,10 @@
 								    <p>Yêu cầu</p>
 				                </div><!-- form-l -->
 				                <div class="form-r fll">
-				                    <p><input type="text" readonly="readonly" name="Tour" class="inpt" value="<%=item.Name %>" /></p>	
-				                    <p><input id="date1"  class="tcal cal" name="date1" type="text" />Ngày về&nbsp;<input id="date2"  class="tcal cal1" name="date2" type="text" /></p>	
-				                    <p><input type="text" name="SoNguoiLon" class="sl" />Trẻ từ 5 - 11 tuổi&nbsp;<input type="text" name="TreTren5" class="sl" />Trẻ dưới 5 tuổi&nbsp;<input type="text" name="TreDuoi5" class="sl1" /></p>	
-				                    <p><textarea name="YeuCau" id="" cols="54" rows="8"></textarea></p>
+				                    <p><input type="text" readonly="readonly" name="TourName" class="inpt" value="<%=item.Name %>" /></p>	
+				                    <p><input id="date1"  class="tcal cal" name="StartDate" type="text" /></p>
+				                    <p><input type="text" name="Adults" class="sl" />Trẻ từ 5 - 11 tuổi&nbsp;<input type="text" name="Children1" class="sl" />Trẻ dưới 5 tuổi&nbsp;<input type="text" name="Children2" class="sl1" /></p>	
+				                    <p><textarea name="Comment" id="" cols="54" rows="8"></textarea></p>
 				                    <p><input type="submit" class="form-btn" name="_hl_action[AddOrder]" value="Đặt Tour" />&nbsp;&nbsp;&nbsp;<input type="reset" class="form-btn" value="Nhập lại" /></p>	
 				                </div><!-- form-r -->
                             </form>
@@ -172,7 +182,7 @@
 		<ul class="lq">
             <%for(int i=0;i<listOther.Count;i++){ %>
 			<li>
-				<div class="img-lq"><a href="#"><img src="<%=Utils.GetResizeFile(listOther[i].File, 2, 142, 92)%>" alt="" /></a></div>
+				<div class="img-lq"><a href="<%=ViewPage.GetURL(listOther[i].MenuID,listOther[i].Code) %>"><img src="<%=Utils.GetResizeFile(listOther[i].File, 2, 142, 92)%>" alt="" /></a></div>
 				<p class="tit-lq"><%=listOther[i].Name %></p>
 				<p class="price">Đơn giá: 
                     <%if (listOther[i].SalePrice > 0) { %>

@@ -62,6 +62,43 @@ namespace HL.Lib.Controllers
                 ViewPage.Error404();
             }
         }
+
+        public void ActionAddOrder(ModOrderEntity entity)
+        {
+            if (entity.CustomerName.Trim() == string.Empty)
+                ViewPage.Message.ListMessage.Add("Vui lòng nhập Họ tên.");
+            if (entity.CustomerAddress.Trim() == string.Empty)
+                ViewPage.Message.ListMessage.Add("Vui lòng Địa chỉ.");
+            if (Global.Utils.GetEmailAddress(entity.CustomerEmail.Trim()) == string.Empty)
+                ViewPage.Message.ListMessage.Add("Email không đúng định dạng.");
+            if (entity.CusomerPhone.Trim() == string.Empty)
+                ViewPage.Message.ListMessage.Add("Vui lòng nhập Số điện thoại.");
+            if(DateTime.Compare(entity.StartDate, DateTime.Now)<=0)
+                ViewPage.Message.ListMessage.Add("Ngày khởi hành không hợp lệ.");
+            if (entity.Adults <= 0)
+                ViewPage.Message.ListMessage.Add("Vui lòng nhập số lượng người tham gia.");
+            //hien thi thong bao loi
+            if (ViewPage.Message.ListMessage.Count > 0)
+            {
+                string message = @"Lỗi: \r\n";
+
+                for (int i = 0; i < ViewPage.Message.ListMessage.Count; i++)
+                    message += @"\r\n + " + ViewPage.Message.ListMessage[i];
+
+                ViewPage.Alert(message);
+            }
+            else
+            {
+                entity.EndDate = DateTime.Now;
+                entity.Activity = false;
+
+                ModOrderService.Instance.Save(entity);
+                entity = new ModOrderEntity();
+                ViewPage.Alert(@"Đặt Tour thành công! \r\nChúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất có thể để xác nhận. \r\nTrân trọng cảm ơn!");
+            }
+            ViewBag.entity = entity;
+        }
+
     }
 
     public class MTourModel

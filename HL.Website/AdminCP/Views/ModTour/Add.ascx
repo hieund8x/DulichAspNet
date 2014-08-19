@@ -9,7 +9,17 @@
 <script type="text/javascript">
     CKFinder.setupCKEditor(null, '/{CPPath}/Content/ckfinder/');
 </script>
-
+<script type="text/javascript">
+    function formatDollar(num) {
+        if (num.length > 0) {
+            return num.split("").reverse().reduce(function (acc, num, i, orig) {
+                return num + (i && !(i % 3) ? "." : "") + acc;
+            }, "");
+        } else {
+            return "0";
+        }
+    }
+</script>
 <form id="hlForm" name="hlForm" method="post">
 <input type="hidden" id="_hl_action" name="_hl_action" />
 
@@ -135,7 +145,8 @@
                     <label>Giá:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="Price" id="Price" value="<%=entity.Price %>" maxlength="255" />
+                    <input onkeyup="document.getElementById('dis_Price').innerHTML = formatDollar(this.value);" class="text_input" type="text" name="Price" id="Price" value="<%=entity.Price %>" maxlength="255" style="width:30%;" />
+                    <span id="dis_Price" style="font-weight:bold;color:Red;"><%=string.Format("{0:#,##0}",entity.Price) %> </span><span style="font-weight:bold;color:Red;"> VNĐ</span>
                 </td>
             </tr>
            <tr>
@@ -143,7 +154,8 @@
                     <label>Giá Khuyến Mại:</label>
                 </td>
                 <td>
-                    <input class="text_input" type="text" name="SalePrice" id="SalePrice" value="<%=entity.SalePrice %>" maxlength="255" />
+                    <input onkeyup="document.getElementById('dis_SalePrice').innerHTML = formatDollar(this.value);" class="text_input" type="text" name="SalePrice" id="SalePrice" value="<%=entity.SalePrice %>" maxlength="255" style="width:30%;" />
+                    <span id="dis_SalePrice" style="font-weight:bold;color:Red;"><%=string.Format("{0:#,##0}",entity.SalePrice) %> </span><span style="font-weight:bold;color:Red;"> VNĐ</span>
                 </td>
             </tr>
            <tr>

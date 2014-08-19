@@ -2,14 +2,24 @@
 
 <%
     var listItem = ViewBag.Data as List<ModAlbumEntity>;
+    int MenuID = ViewBag.MenuID;
+    var listPage = SysPageService.Instance.CreateQuery()
+                                          .Where(o => o.Activity == true)
+                                          .Where(MenuID > 0, o => o.MenuID == MenuID)
+                                          .ToList_Cache();
 %>
 
-<div class="tit-album"><a href="#">Album hình ảnh</a></div>
+<div class="tit-album">
+    <%if(listPage!=null && listPage.Count>0){ %>
+        <p><a href="<%=ViewPage.GetPageURL(listPage[0]) %>"><%=listPage[0].Name %></a></p>
+    <%}else{ %>
+        <a href="javascript:void(0);"><%=ViewBag.Title!=null ? ViewBag.Title : "" %></a>
+    <%} %>
+</div>
 <ul class="nav-album">
-	<li><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
-	<li class="last"><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
-	<li><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
-	<li class="last"><a href="#"><img src="/Content/style/images/album.jpg" alt="" /></a></li>
+    <%for(int i=0;listItem!=null && i<listItem.Count;i++){ %>
+	<li class="<%=i>0 && i%2==0 ? "last" : "" %>"><a href="<%=ViewPage.GetURL(listItem[i].MenuID, listItem[i].Code)%>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 84, 63)%>" alt="" /></a></li>
+    <%} %>
 </ul>
 <div class="clb"></div>
 

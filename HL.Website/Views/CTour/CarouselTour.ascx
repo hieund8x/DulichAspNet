@@ -6,124 +6,63 @@
 
 <div class="tabshome">
 				<ul class="tabs">
-			        <li><a href="#tab1"><span>Lịch khởi hành</span></a></li>
 			        <li><a href="#tab2"><span>Tour khuyến mãi</span></a></li>
 			        <li><a href="#tab3"><span>tour mới</span></a></li>
-			        <li><a href="#tab5"><span>visa - hộ chiếu</span></a></li>
-			        <li><a href="#tab6"><span>vận chuyển</span></a></li>
-			        <li><a href="#tab7"><span>đặt phòng khách sạn</span></a></li>
-
 			    </ul>
 			    <div class="tab_container">
-			        <div id="tab1" class="tab_content">
-			           <ul class="lkh">
-			           		<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-			           </ul>
-			        </div>
 			        <div id="tab2" class="tab_content">
 			            <ul class="lkh">
+                            <%
+                                int countKM = 0;
+                                for (int i = 0; listItem != null && i < listItem.Count;i++ )
+                                { 
+                                    if(listItem[i].State>=2 && (listItem[i].State==2 || listItem[i].State%2==1)){
+                            %>
 			           		<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           			<div class="img-lkh"><a href="<%=ViewPage.GetURL(listItem[i].MenuID, listItem[i].Code)%>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 175, 129)%>" alt="" /></a></div>	
+								<h3><a href="<%=ViewPage.GetURL(listItem[i].MenuID, listItem[i].Code)%>"><%=listItem[i].Name%></a></h3>
+		                        <p><%=listItem[i].TimeTotal%> (<%=listItem[i].Vehicle%>)</p>
+		                        <p>KHỞI HÀNH: <%=listItem[i].StartDate%></p>
 			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
+                            <%
+                                        countKM++;
+                            }
+                                    if (countKM == 4)
+                                    {
+                                        break;
+                                    }
+                              }
+                               %>
+							
 			           </ul>
 			        </div>
 			        <div id="tab3" class="tab_content">
 			           <ul class="lkh">
+                            <%
+                                int countNew = 0;
+                                for (int i = 0; listItem != null && i < listItem.Count;i++ )
+                                { 
+                                    if(listItem[i].State>=4 && (listItem[i].State==4 || listItem[i].State%4==3)){
+                            %>
 			           		<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
+			           			<div class="img-lkh"><a href="<%=ViewPage.GetURL(listItem[i].MenuID, listItem[i].Code)%>"><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 175, 129)%>" alt="" /></a></div>	
+								<h3><a href="<%=ViewPage.GetURL(listItem[i].MenuID, listItem[i].Code)%>"><%=listItem[i].Name%></a></h3>
+		                        <p><%=listItem[i].TimeTotal%> (<%=listItem[i].Vehicle%>)</p>
+		                        <p>KHỞI HÀNH: <%=listItem[i].StartDate%></p>
 			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
-							<li>
-			           			<div class="img-lkh"><a href="#"><img src="/Content/style/images/lkh.jpg" alt="" /></a></div>
-			           			<h3><a href="#">Hà Nội - Lào Cai</a></h3>
-								<p>3 NGÀY 3 ĐÊM (MÁY BAY)</p>
-								<p>KHỞI HÀNH NGÀY 22/333</p>
-								<p>SỐ CHỖ CÒN NHẬN: 02</p>
-			           		</li>
+                            <%
+                                        countNew++;
+                            }
+                                    if (countNew == 4)
+                                    {
+                                        break;
+                                    }
+                              }
+                               %>
+							
 			           </ul>
 			        </div>
-			        <div id="tab4" class="tab_content">
-			          
-			        </div>
-			        <div id="tab5" class="tab_content">
-			          
-			        </div>
-			        <div id="tab6" class="tab_content">
-			          
-			        </div>
-			        <div id="tab7" class="tab_content">
-			          
-			        </div>
-
+			        
 			    </div>
 			</div><!--tabshome-->
 
