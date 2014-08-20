@@ -110,7 +110,7 @@
             a.children("li").css("width",c).css("height",d);
             if(H == 'enable'){
                 a.children("li").each(function(i){
-                     a.children("li").eq(i).append("<p>"+a.children("li").eq(i).children("a").children("img").attr("alt")+"</p>");
+                    a.children("li").eq(i).append("<p><a href=\""+a.children("li").children("a").attr("href")+"\"><b>"+a.children("li").eq(i).children("a").children("img").attr("alt")+"</b></a></p>");
                 });
             }
             a.children("li").children("p").css("background-color",h).css("color",i).css('width',parseInt(c)-10);

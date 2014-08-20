@@ -22,7 +22,10 @@
     <%=item.Content %>
 <div class="clb"></div>
 				<div class="follows">
-				    <div class="f-l fll"><img src="/Content/style/images/follows.jpg" /></div>
+				    <div class="f-l fll">
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_native_toolbox"></div>
+				    </div>
 				    <div class="ontop">
 				        <ul>
 				            <li><a href="#"><img src="/Content/style/images/top.jpg" /></a></li>

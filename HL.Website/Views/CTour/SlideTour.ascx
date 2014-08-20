@@ -4,7 +4,7 @@
     var listItem = ViewBag.Data as List<ModTourEntity>;
 %>
 <script type="text/javascript" src="/Content/js/number_slideshow.js"></script>
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">6 
     $(function () {
         $("#number_slideshow1").number_slideshow({
             slideshow_autoplay: 'enable',//enable disable
@@ -18,7 +18,7 @@
             slideshow_border_size: '0',
             slideshow_border_color: '#006600',
             slideshow_show_button: 'disable',//enable disable
-            slideshow_show_title: 'disable',//enable disable
+            slideshow_show_title: 'enable',//enable disable
             slideshow_button_text_color: '#FFF',
             slideshow_button_background_color: '#66CC00',
             slideshow_button_current_background_color: '#006600',
@@ -32,16 +32,14 @@
 <div class="slide">
 	<div id="number_slideshow1" class="number_slideshow">
             <ul>
-                <li><a href="#"><img src="/Content/style/images/slide.jpg" width="1000" height="317" /></a></li>
-                <li><a href="#"><img src="/Content/style/images/slide.jpg" width="1000" height="317" /></a></li>
-                <li><a href="#"><img src="/Content/style/images/slide.jpg" width="1000" height="317" /></a></li>
-                <li><a href="#"><img src="/Content/style/images/slide.jpg" width="1000" height="317" /></a></li>
+                <%for(int i=0;listItem!=null && i<listItem.Count;i++){ %>
+                <li><a href="<%=ViewPage.GetURL(listItem[i].MenuID,listItem[i].Code) %>" ><img src="<%=Utils.GetResizeFile(listItem[i].File, 2, 1000, 317)%>" width="1000" height="317" alt="<%=listItem[i].Name %>" /></a></li>
+                <%} %>
             </ul>
             <ul class="number_slideshow_nav">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
+                <%for(int i=0;listItem!=null && i<listItem.Count;i++){ %>
+                <li><a href="#"><%=(i+1) %></a></li>
+                <%} %>
             </ul>
             <div style="clear: both"></div>
         <script>
